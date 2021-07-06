@@ -49,7 +49,7 @@ def get_desc(md_text):
     try:
         rm_citations = re.sub(r"\(Citation([^\)]+)\)", "", md_text)
         rm_mitre_links = re.sub(r"\(https([^\)]+)\)", "", rm_citations)
-        clean_desc = rm_mitre_links.translate(str.maketrans({'[':None, ']':None}))
+        clean_desc = rm_mitre_links.translate(str.maketrans({'[':None, ']':None})).strip()
         return clean_desc
     # In case a dupe with no desc makes it through
     except AttributeError:
@@ -59,9 +59,17 @@ def get_desc(md_text):
 def get_item_ids(item_list):
     return [item.external_references[0].external_id for item in item_list] 
 
+def get_item_names(item_list):
+    return [item["name"] for item in item_list] 
 
-def make_group_node(group, group_software, group_techniques, link_tool=False, 
-                                link_tool_techniques=False, lift_tool_techniques=False):
+def get_id_name(item_list):
+    items_dict = {}
+    for item in item_list:
+        items_dict[item.external_references[0].external_id] = item.name
+    return items_dict 
+
+def make_group_node(group, group_software, group_techniques, link_tool=False, link_tool_techniques=False, 
+                                                            lift_tool_techniques=False):
     
     group_id = group.external_references[0].external_id
     group_name = group.name
@@ -77,7 +85,8 @@ def make_group_node(group, group_software, group_techniques, link_tool=False,
         group_val = 0
         group_tools = []
     else:
-        group_tools = list(set(get_item_ids(group_software))) # To get unique tools only
+        # group_tools = list(set(get_item_ids(group_software))) # To get unique tools only
+        group_tools = get_id_name(group_software)
         group_val = len(group_tools)
 
     try:
@@ -88,7 +97,7 @@ def make_group_node(group, group_software, group_techniques, link_tool=False,
         group_aliases = []
 
     try:
-        group_techniques = get_item_ids(group_techniques)
+        group_techniques = get_id_name(group_techniques)
     except:
         group_techniques = []
 
@@ -100,13 +109,14 @@ def make_group_node(group, group_software, group_techniques, link_tool=False,
                     "name": group_name,
                     "aliases": group_aliases,
                     "description": group_description,
-                    "tools": group_tools,
-                    "techniques": group_techniques,
                     "affiliation": group_affiliation,
                     "targets": group_targets,
                     "speciality": group_speciality,
+                    "tools": group_tools,
+                    "techniques": group_techniques,
                 }
             },
+
 
     json_data["nodes"] += new_group_node
 
@@ -165,13 +175,13 @@ def make_tool_node(tool, link_techniques=False, lift_techniques=False):
     if lift_techniques or link_techniques:
         lift_teqs = lift.get_techniques_used_by_software(tool)
 
-        if len(set(get_item_ids(lift_teqs))) < 100: 
-            tool_technique_ids = list(set(get_item_ids(lift_teqs)))
+        if len(lift_teqs) < 100: 
+            tool_techniques = get_id_name(lift_teqs)
         else:
-            tool_technique_ids = []
+            tool_techniques = []
             
-        new_tool_node[0]["val"] = len(tool_technique_ids)
-        new_tool_node[0]["techniques"] = tool_technique_ids
+        new_tool_node[0]["val"] = len(tool_techniques)
+        new_tool_node[0]["attributes"]["techniques"] = tool_techniques
 
         if link_techniques:
 
@@ -240,14 +250,14 @@ def make_technique_node(technique):
 
 
 def main():
-    for group in groups:
+    for group in groups[:3]:
         group_software = lift.get_software_used_by_group(group)
         group_techniques = lift.get_techniques_used_by_group(group)
-        make_group_node(group, group_software, group_techniques, link_tool=True)
+        make_group_node(group, group_software, group_techniques, link_tool=True, lift_tool_techniques=True)
         
         print(f"Finished Group: {group.name}")
 
-    with open('force_graph_data.json', 'w') as f:
+    with open('group_tools.json', 'w') as f:
         json.dump(json_data, f, ensure_ascii=False, indent=4)
     
 
