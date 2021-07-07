@@ -250,14 +250,14 @@ def make_technique_node(technique):
 
 
 def main():
-    for group in groups[:3]:
+    for group in groups:
         group_software = lift.get_software_used_by_group(group)
         group_techniques = lift.get_techniques_used_by_group(group)
         make_group_node(group, group_software, group_techniques, link_tool=True, lift_tool_techniques=True)
         
         print(f"Finished Group: {group.name}")
 
-    with open('group_tools.json', 'w') as f:
+    with open('force_graph_data.json', 'w') as f:
         json.dump(json_data, f, ensure_ascii=False, indent=4)
     
 
