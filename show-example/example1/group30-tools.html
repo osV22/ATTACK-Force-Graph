@@ -13,7 +13,7 @@
     const elem = document.getElementById('3d-graph');
 
     const Graph = ForceGraph3D()(elem)
-      .jsonUrl('group10_tool_teq.json')
+      .jsonUrl('group30_tools.json')
       .nodeColor(node => {
         if (node.type == "group") {
           node.attributes.val += 100
@@ -21,7 +21,7 @@
         } else if (node.type == "tool") {
           return "#FFC000"
         } else {
-          return "#BDFF00"
+          return "pink"
         }
       })
       .nodeLabel(node => `${node.id}: ${node.attributes.name}`)
