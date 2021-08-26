@@ -1,3 +1,4 @@
+from os import link
 from attackcti import attack_client
 import json
 import re
@@ -68,8 +69,8 @@ def get_id_name(item_list):
         items_dict[item.external_references[0].external_id] = item.name
     return items_dict 
 
-def make_group_node(group, group_software, group_techniques, link_tool=False, link_tool_techniques=False, 
-                                                            lift_tool_techniques=False):
+def make_group_node(group, group_software, group_techniques, link_tool=False, 
+                                    link_tool_techniques=False, lift_tool_techniques=False):
     
     group_id = group.external_references[0].external_id
     group_name = group.name
@@ -104,8 +105,8 @@ def make_group_node(group, group_software, group_techniques, link_tool=False, li
     new_group_node = {
                 "id": group_id,
                 "type": node_type,
+                "val": group_val,
                 "attributes": {
-                    "val": group_val,
                     "name": group_name,
                     "aliases": group_aliases,
                     "description": group_description,
@@ -235,8 +236,8 @@ def make_technique_node(technique):
     new_technique_node = { 
                 "id": technique_id,
                 "type": node_type,
+                "val": technique_val,
                 "attributes": {
-                    "val": technique_val,
                     "name": technique_name,
                     "chain_phase": chain_phase,
                     "description": technique_detection,
@@ -250,11 +251,11 @@ def make_technique_node(technique):
 
 
 def main():
-    for group in groups:
+    for group in groups:            
         group_software = lift.get_software_used_by_group(group)
         group_techniques = lift.get_techniques_used_by_group(group)
         make_group_node(group, group_software, group_techniques, link_tool=True, lift_tool_techniques=True)
-        
+
         print(f"Finished Group: {group.name}")
 
     with open('force_graph_data.json', 'w') as f:
