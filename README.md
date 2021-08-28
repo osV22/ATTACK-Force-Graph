@@ -5,21 +5,21 @@
 ![Showcase Header](/images/showcase_header.png)
 
 ## DEMO:
-- PENDING
+
+- ## [View Demo (GitHub Pages)](https://osv22.github.io/ATTACK-Force-Graph/main-site/index.html)
 
 ## Preview:
 ![Preview](/images/preview_header.png)
 
 
 ## TODO:
-- [ ] Optimize time complexity for certain parts
 - [ ] Add affiliation template
-- [ ] Add Speciality template
-
+- [ ] Add speciality template
+- [ ] Optimize time complexity for certain sections
 
 ## What?
 - Generate JSON force-graph data nodes and links from the MITRE ATTACK Framework based on your preferences. (`graph_generator.py`)
-- Use that data to visualize your results with a UI tailored around the ATTACK data. (`Frontend` directory)
+- Use that data to visualize your results with a UI tailored around the ATTACK data. (`frontend` directory)
 
 - The JSON data generated is formatted for use with @vasturiano's awesome various force-directed graph projects. (Tested and works on both 2D and 3D versions)
 - At the moment you can do the following combinations:
