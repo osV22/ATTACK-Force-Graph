@@ -1,0 +1,382 @@
+<head>
+
+  <script src="//unpkg.com/three"></script>
+  <script src="//unpkg.com/three/examples/js/renderers/CSS2DRenderer.js"></script>
+  <script src="//unpkg.com/3d-force-graph"></script>
+
+  <link rel="stylesheet" href="dist/css/style.css">
+</head>
+
+<body>
+
+  <div id="parent">
+    <div class="header-main">
+      <div class="col-8">
+        <div class="row logo-box">
+          <img class="logo" src="assets/icons/logo.svg" alt="">
+          <h2>ATTACK-Force-Graph</h2>
+        </div>
+      </div>
+      <div class="col-4 about-box">
+          <button id="btn-about" type="button" class="btn-outline-primary">
+            <i class="far fa-question-circle fa-x"></i>
+            About
+          </button>
+          
+
+          <span class="divider"></span>
+          <a class="btn-icon border-left" target="_blank" href="https://github.com/osV22/ATTACK-Force-Graph">
+            <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+          </a>
+        
+      </div>
+    </div>
+
+    <div id="select-graph-data" class="control-box">
+      <div class="control-section-title">
+        <small>Small Examples</small>
+        <hr>
+      </div>
+      <div id="examples-data-wrapper" class="btn-group-connection">
+        <button id="example-groups" class="btn-hi-viz active" type="button">
+          Groups
+        </button>
+
+        <i class="fa fa-chevron-right"></i>
+        <button id="example-group-tools" class="btn-hi-viz active" type="button">
+          Tools
+        </button>
+        <i class="fa fa-chevron-right"></i>
+        <button id="example-group-tools-teqs" class="btn-hi-viz" type="button">
+          Techniques
+        </button>
+      </div>
+
+      <!-- ACTUAL DATA -->
+      <div class="control-section-title">
+        <small>Full ATT&CK Data</small>
+        <hr>
+      </div>
+      <div id="mitre-data-wrapper" class="btn-group-connection">
+        <button id="full-groups" class="btn-hi-viz" type="button">
+          Groups
+        </button>
+        <i class="fa fa-chevron-right"></i>
+        <button id="full-group-tools" class="btn-hi-viz" type="button">
+          Tools
+        </button>
+        <i class="fa fa-chevron-right"></i>
+        <button id="full-group-tools-teqs" class="btn-hi-viz" type="button">
+          Techniques
+        </button>
+      </div>
+
+      <div id="guide-box" class="guide-box">
+        <p>Click a node to learn more about the group, tool, or technique!</p>
+      </div>
+      <div id="warning-box" class="warning-box" hidden>
+        <p>Relationship links have been disabled due to the large number of connections.</p>
+      </div>
+    </div>
+
+
+    <div id="infoSidebar" class="sidebar">
+      <div id="toggle-info-btn" class="toggle-info-btn-closed d-flex" onclick="sidebarCalled()">
+        <i id="info-toggle-icon" class="fas fa-chevron-left"></i>
+      </div>
+      <div class="d-flex">
+        <div class="node-type">
+          <input disabled type="text" id="set-type" value="ABOUT">
+        </div>
+        <div id="set-node-title" class="node-title">
+          <h2 id="set-name">About This Awesome Sauce</h2>
+        </div>
+      </div>
+
+      <div id="inner-sidebar" class="inner-sidebar">
+        <div id="group-quick-stats-box" class="container info-box" hidden>
+          <div class="info-section-title">
+            <p>Quick Stats</p>
+            <hr>
+          </div>
+          <div class="row">
+            <div class="col-2 info-element">
+              <div class="stat-number">
+                <p id="tools-count" class="tool-text" >999</p>
+                <small class="subElementText">Tools</small>
+              </div>
+            </div>
+            <div class="col-2 info-element">
+              <div class="stat-number">
+                <p id="technique-count" class="technique-text" >999</p>
+                <small class="subElementText">Techniques</small>
+              </div>
+            </div>
+            <div class="col-4 info-element dual-text-box-sm">
+              <div class="vertical-box">
+                <input disabled type="text" value="Speciality" id="rotate">
+              </div>
+                <div class="vertical-noir-box">
+                  <img src="assets/images/flags/doc.png" alt="">
+                  <small class="element-sub-text">PENDING</small>
+              </div>
+            </div>
+            <div class="col-4 info-element dual-text-box-sm">
+              <div class="vertical-box">
+                <input disabled type="text" value="Affiliation" id="rotate">
+              </div>
+                <div class="vertical-noir-box">
+                  <div class="custom-svg">                
+                    <img id="affiliation-avatar" src="assets/icons/states/world.svg" alt="">
+                  </div>
+                  <small class="element-sub-text">PENDING</small>
+              </div>
+            </div>
+          </div>
+  
+          <!-- <div class="info-subtitle">
+            <p>Attacks</p>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              Nation States (PENDING)
+            </div>
+            <div class="col-6">
+              Sectors (PENDING)
+            </div>
+          </div> -->
+  
+        </div>
+  
+        <div id="aliases-box" class="container info-box" hidden>
+          <div class="info-section-title">
+            <p>Aliases</p>
+            <hr>
+          </div>
+          <div id="set-aliases">
+          </div>
+        </div>
+  
+        <div id="chain-phase-box" class="container info-box" hidden>
+          <div class="info-section-title">
+            <p>Attack Chain Phase</p>
+            <hr>
+          </div>
+          <div id="set-chain-phase">
+  
+          </div>
+        </div>
+
+        <div id="description-box" class="container info-box" hidden>
+          <div class="info-section-title">
+            <p>Description</p>
+            <hr>
+          </div>
+          <div id="set-description"></div>
+        </div>
+
+  
+        <div id="platforms-targeted-box" class="container info-box" hidden>
+          <div class="info-section-title">
+            <p>Platforms Targeted</p>
+            <hr>
+          </div>
+          <div id="set-platforms-targeted">
+  
+          </div>
+        </div>
+  
+  
+        <div id="detection-box" class="container info-box" hidden>
+          <div class="info-section-title">
+            <p>Detection</p>
+            <hr>
+          </div>
+          <div id="set-detection"></div>
+        </div>
+        
+
+        <div id="group-tools-box" class="container info-box" hidden>
+          <div class="info-section-title">
+            <p>Group Tools</p>
+            <hr>
+          </div>
+          <div id="set-group-tools"></div>
+        </div>
+
+        
+        <div id="group-techniques-box" class="container info-box" hidden>
+          <div class="info-section-title">
+            <p>Group Techniques</p>
+            <hr>
+          </div>
+          <div id="set-group-techniques"></div>
+        </div>
+
+
+        <div id="tool-techniques-box" class="container info-box" hidden>
+          <div class="info-section-title">
+            <p>Tool Techniques/ Mechanisms</p>
+            <hr>
+          </div>
+          <div id="set-tool-techniques"></div>
+        </div>
+  
+
+
+        <div id="about-what-box" class="container info-box">
+          <div class="info-section-title">
+            <p>What is this?</p>
+            <hr>
+          </div>
+          <ul>
+            <li>
+              <small>MITRE's ATTACK data visualized with a force-directed graph. Showcasing a script and UI built so others can create their own custom graphs of the ATT&CK data and visualize relationships on the fly.</small>
+            </li>
+            <li>
+              <small>You can use the script to generate a graph for specific groups/ tools/ techniques and as long as your nodes have an <code>attribute</code> key (as is the default) you can visualize the graph. You can then use this frontend I built specifically for the MITRE ATT&CK data to visualize/ present the results of your custom graph.</small>
+            </li>
+            <li>
+              <small>Graph generator script and all frontend work can be found in the repo below.</small>
+            </li>
+          </ul>
+          <div class="more-information">
+            <p>Check it out!</p>
+  
+            <a target="_blank" id="btn-about" class="link-outline-primary" href="https://github.com/osV22/ATTACK-Force-Graph">
+              <i class="fab fa-github"></i>
+              View on GitHub
+            </a>
+          </div>
+        </div>
+
+        <div id="about-why-box" class="container info-box">
+          <div class="info-section-title">
+            <p>But Why?</p>
+            <hr>
+          </div>
+          <ul>
+            <li>
+              <small>To easily see relationships between groups, tools, and/ or techniques.</small>
+            </li>
+            <li>
+              <small>To sharpen up my JS skills especially dealing with dom objects.</small>
+            </li>
+            <li>
+              <small>Force-directed graphs are seriously <code>(⌐■_■)</code> cool</small>
+            </li>
+          </ul>
+        </div>
+
+        <div id="about-credits-box" class="container info-box">
+          <div class="info-section-title">
+            <p>Special Thanks!</p>
+            <hr>
+            <small>The project would not have been possible without the following:</small>
+          </div>
+          <ul class="credits">
+            <li>
+              <small><strong><a href="https://github.com/Cyb3rWard0g">@Cyb3rWard0g</a></strong> for the <a href="https://github.com/OTRF/ATTACK-Python-Client">ATTACK-Python-Client </a></small>
+            </li>
+            <li>
+              <small><strong><a href="https://github.com/vasturiano">@vasturiano</a></strong> for the <a href="https://github.com/vasturiano/3d-force-graph">3d-force-graph </a></small>
+            </li>
+            <li>
+              <small><strong><a href="https://www.mitre.org/">MITRE</a></strong> for the <a href="https://attack.mitre.org/">ATT&CK Data </a></small>
+            </li>
+          </ul>
+        </div>
+
+        <div class="container info-box">
+          <div class="info-section-title">
+            <p>More Information</p>
+            <hr>
+          </div>
+          <small>This project is made possible by the data from the MITRE ATT&CK® Framework. For more information/ accuracy checkout the official site below.</small> 
+          <div class="more-information">
+            <p>Official MITRE ATT&CK Page</p>
+  
+            <button class="btn-mitre">
+              <a id="set-mitre-link" target="_blank" href="#">
+                <h4>MITRE<span id="set-mitre-id"></span></h4>
+              </a>
+            </button>
+          </div>
+        </div>
+  
+        <div class="white-space">
+          <hr>
+        </div>
+
+
+      </div>
+
+    </div>
+
+    <div class="legend">
+      <div class="legend-info">
+        <div class="node-key">
+          <div class="circle-group"></div>
+          <p>Group</p>
+        </div>
+        <div class="node-key">
+          <div class="circle-tool"></div>
+          <p>Tool</p>
+        </div>
+        <div class="node-key">
+          <div class="circle-technique"></div>
+          <p>Technique</p>
+        </div>
+      </div>
+
+    </div>
+
+<!-- onclick="resetCamera()" -->
+
+    <div class="camera-reset">
+      <div class="camera-reset-btn">
+        <button id="btn-camera" class="btn-light" > 
+          <i class="fas fa-compress"></i>
+        </button>
+      </div>
+    </div>
+
+
+    <div class="col-12 bottom-bar">
+        <div class="col-3 made-by">
+          Made with <i class="fas fa-heart"></i> by <a target="_blank" href="https://github.com/osV22">osV22</a>
+        </div>
+          <div class="col-5">
+            <div class="row control-guide">
+              <div class="col-3">
+                <p>
+                  Left-click: rotate
+                </p>
+                
+              </div>
+              <div class="col-6">
+                <p>
+                  Mouse-wheel/ Middle-click: zoom
+                </p>
+                
+              </div>
+              <div class="col-3">
+                <p>
+                  Right-click: pan
+                </p>
+                
+              </div>
+            </div>
+            
+          </div>
+          <div class="col-3"></div>
+    </div>
+  </div>
+
+  <div id="3d-graph" style="position: fixed;"></div>
+
+  <script src="dist/js/navAction.js"></script>
+  <script type="module" src="dist/js/main.js"></script>
+  <script type="module" src="dist/js/about.js"></script>
+
+</body>

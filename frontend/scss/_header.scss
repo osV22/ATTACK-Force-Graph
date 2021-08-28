@@ -1,0 +1,27 @@
+.header-main {
+  position: fixed;
+  display: flex;
+  z-index: 6;
+  width: 100%;
+  padding: .8rem;
+  color: $white-dove;
+  background-color: $header-background;
+  border-bottom: solid #4BDFFF .2px;
+
+  .logo-box {
+    align-items: center;
+      
+    .logo {
+      width: 3.5rem;
+      padding-left: 1rem;
+      padding-right: 0; 
+      // margin-left: 1rem;
+    }
+  }
+    
+  h2 {
+      width: auto;
+      margin: 0rem;
+      margin-top: .3rem;
+  }
+}
