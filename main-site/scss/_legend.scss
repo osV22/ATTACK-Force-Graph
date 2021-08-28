@@ -1,0 +1,37 @@
+.legend {
+  position: fixed;
+  bottom: 2rem;
+  padding: .5rem;
+  z-index: 7;
+  color: #00B273;
+  letter-spacing: 1px;
+
+  .node-key {
+    display: flex;
+    align-items: center;
+  }
+
+  .circle {
+    display: block;
+    margin-right: .5rem;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+  }
+  .circle-group {
+    @extend .circle;
+    background: -webkit-radial-gradient(1px 1px, circle, $group-color, $group-dark);
+  }
+  .circle-tool {
+    @extend .circle;
+    background: -webkit-radial-gradient(1px 1px, circle, $tool-color, $tool-dark);
+  }
+  .circle-technique {
+    @extend .circle;
+    background: -webkit-radial-gradient(1px 1px, circle, $technique-color, $technique-dark);
+  }  
+
+  p {
+    margin: 0;
+  }
+}

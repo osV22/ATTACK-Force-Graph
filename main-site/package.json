@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.3",
+    "@iconfu/svg-inject": "^1.2.3",
+    "bootstrap": "^5.0.2"
+  }
+}

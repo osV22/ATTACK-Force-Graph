@@ -1,0 +1,4240 @@
+{
+    "nodes": [
+        {
+            "id": "G0123",
+            "type": "group",
+            "attributes": {
+                "val": 2,
+                "name": "Volatile Cedar",
+                "aliases": [
+                    "Lebanese Cedar"
+                ],
+                "description": "Volatile Cedar is a Lebanese threat group that has targeted individuals, companies, and institutions worldwide. Volatile Cedar has been operating since 2012 and is motivated by political and ideological interests.",
+                "affiliation": "",
+                "targets": [],
+                "speciality": [],
+                "tools": {
+                    "S0572": "Caterpillar WebShell",
+                    "S0569": "Explosive"
+                },
+                "techniques": {
+                    "T1595.002": "Vulnerability Scanning",
+                    "T1505.003": "Web Shell",
+                    "T1190": "Exploit Public-Facing Application",
+                    "T1105": "Ingress Tool Transfer"
+                }
+            }
+        },
+        {
+            "id": "S0572",
+            "type": "tool",
+            "attributes": {
+                "name": "Caterpillar WebShell",
+                "aliases": [],
+                "labels": [
+                    "malware"
+                ],
+                "description": "Caterpillar WebShell is a self-developed Web Shell tool created by the group Volatile Cedar.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1069.001": "Local Groups",
+                    "T1059.003": "Windows Command Shell",
+                    "T1112": "Modify Registry",
+                    "T1110": "Brute Force",
+                    "T1105": "Ingress Tool Transfer",
+                    "T1083": "File and Directory Discovery",
+                    "T1082": "System Information Discovery",
+                    "T1057": "Process Discovery",
+                    "T1046": "Network Service Scanning",
+                    "T1041": "Exfiltration Over C2 Channel",
+                    "T1033": "System Owner/User Discovery",
+                    "T1016": "System Network Configuration Discovery",
+                    "T1014": "Rootkit",
+                    "T1007": "System Service Discovery",
+                    "T1005": "Data from Local System"
+                }
+            },
+            "val": 15
+        },
+        {
+            "id": "S0569",
+            "type": "tool",
+            "attributes": {
+                "name": "Explosive",
+                "aliases": [],
+                "labels": [
+                    "malware"
+                ],
+                "description": "Explosive is a custom-made remote access tool used by the group Volatile Cedar. It was first identified in the wild in 2015.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1573.001": "Symmetric Cryptography",
+                    "T1071.001": "Web Protocols",
+                    "T1564.001": "Hidden Files and Directories",
+                    "T1056.001": "Keylogging",
+                    "T1115": "Clipboard Data",
+                    "T1112": "Modify Registry",
+                    "T1106": "Native API",
+                    "T1105": "Ingress Tool Transfer",
+                    "T1082": "System Information Discovery",
+                    "T1033": "System Owner/User Discovery",
+                    "T1025": "Data from Removable Media",
+                    "T1016": "System Network Configuration Discovery"
+                }
+            },
+            "val": 12
+        },
+        {
+            "id": "G0095",
+            "type": "group",
+            "attributes": {
+                "val": 1,
+                "name": "Machete",
+                "aliases": [
+                    "APT-C-43",
+                    "El Machete"
+                ],
+                "description": "Machete is a suspected Spanish-speaking cyber espionage group that has been active since at least 2010. It has primarily focused its operations within Latin America, with a particular emphasis on Venezuela, but also in the US, Europe, Russia, and parts of Asia. Machete generally targets high-profile organizations such as government institutions, intelligence services, and military units, as well as telecommunications and power companies.",
+                "affiliation": "",
+                "targets": [],
+                "speciality": [],
+                "tools": {
+                    "S0409": "Machete"
+                },
+                "techniques": {
+                    "T1204.002": "Malicious File",
+                    "T1204.001": "Malicious Link",
+                    "T1059.006": "Python",
+                    "T1059.005": "Visual Basic",
+                    "T1059.003": "Windows Command Shell",
+                    "T1566.002": "Spearphishing Link",
+                    "T1566.001": "Spearphishing Attachment",
+                    "T1036.005": "Match Legitimate Name or Location",
+                    "T1218.007": "Msiexec",
+                    "T1053.005": "Scheduled Task",
+                    "T1189": "Drive-by Compromise",
+                    "T1032": "Standard Cryptographic Protocol"
+                }
+            }
+        },
+        {
+            "id": "S0409",
+            "type": "tool",
+            "attributes": {
+                "name": "Machete",
+                "aliases": [
+                    "Pyark"
+                ],
+                "labels": [
+                    "malware"
+                ],
+                "description": "Machete is a cyber espionage toolset used by Machete. It is a Python-based backdoor targeting Windows machines that was first observed in 2010.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1573.002": "Asymmetric Cryptography",
+                    "T1573.001": "Symmetric Cryptography",
+                    "T1071.002": "File Transfer Protocols",
+                    "T1071.001": "Web Protocols",
+                    "T1132.001": "Standard Encoding",
+                    "T1074.001": "Local Data Staging",
+                    "T1052.001": "Exfiltration over USB",
+                    "T1059.006": "Python",
+                    "T1564.001": "Hidden Files and Directories",
+                    "T1560.003": "Archive via Custom Method",
+                    "T1560": "Archive Collected Data",
+                    "T1555.003": "Credentials from Web Browsers",
+                    "T1056.001": "Keylogging",
+                    "T1036.005": "Match Legitimate Name or Location",
+                    "T1036.004": "Masquerade Task or Service",
+                    "T1027.002": "Software Packing",
+                    "T1552.004": "Private Keys",
+                    "T1070.004": "File Deletion",
+                    "T1547.001": "Registry Run Keys / Startup Folder",
+                    "T1053.005": "Scheduled Task",
+                    "T1217": "Browser Bookmark Discovery",
+                    "T1140": "Deobfuscate/Decode Files or Information",
+                    "T1125": "Video Capture",
+                    "T1123": "Audio Capture",
+                    "T1120": "Peripheral Device Discovery",
+                    "T1115": "Clipboard Data",
+                    "T1113": "Screen Capture",
+                    "T1105": "Ingress Tool Transfer",
+                    "T1083": "File and Directory Discovery",
+                    "T1082": "System Information Discovery",
+                    "T1057": "Process Discovery",
+                    "T1049": "System Network Connections Discovery",
+                    "T1041": "Exfiltration Over C2 Channel",
+                    "T1029": "Scheduled Transfer",
+                    "T1027": "Obfuscated Files or Information",
+                    "T1025": "Data from Removable Media",
+                    "T1020": "Automated Exfiltration",
+                    "T1016": "System Network Configuration Discovery",
+                    "T1010": "Application Window Discovery",
+                    "T1008": "Fallback Channels",
+                    "T1005": "Data from Local System"
+                }
+            },
+            "val": 41
+        },
+        {
+            "id": "G0086",
+            "type": "group",
+            "attributes": {
+                "val": 2,
+                "name": "Stolen Pencil",
+                "aliases": [],
+                "description": "Stolen Pencil is a threat group likely originating from DPRK that has been active since at least May 2018. The group appears to have targeted academic institutions, but its motives remain unclear.",
+                "affiliation": "",
+                "targets": [],
+                "speciality": [],
+                "tools": {
+                    "S0029": "PsExec",
+                    "S0002": "Mimikatz"
+                },
+                "techniques": {
+                    "T1078.003": "Local Accounts",
+                    "T1566.002": "Spearphishing Link",
+                    "T1555.003": "Credentials from Web Browsers",
+                    "T1056.001": "Keylogging",
+                    "T1003.001": "LSASS Memory",
+                    "T1021.001": "Remote Desktop Protocol",
+                    "T1552.001": "Credentials In Files",
+                    "T1176": "Browser Extensions",
+                    "T1040": "Network Sniffing"
+                }
+            }
+        },
+        {
+            "id": "S0029",
+            "type": "tool",
+            "attributes": {
+                "name": "PsExec",
+                "aliases": [],
+                "labels": [
+                    "tool"
+                ],
+                "description": "PsExec is a free Microsoft tool that can be used to execute a program on another computer. It is used by IT administrators and attackers.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1570": "Lateral Tool Transfer",
+                    "T1569.002": "Service Execution",
+                    "T1021.002": "SMB/Windows Admin Shares"
+                }
+            },
+            "val": 3
+        },
+        {
+            "id": "S0002",
+            "type": "tool",
+            "attributes": {
+                "name": "Mimikatz",
+                "aliases": [],
+                "labels": [
+                    "tool"
+                ],
+                "description": "Mimikatz is a credential dumper capable of obtaining plaintext Windows account logins and passwords, along with many other features that make it useful for testing the security of networks.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1555.004": "Windows Credential Manager",
+                    "T1003.004": "LSA Secrets",
+                    "T1134.005": "SID-History Injection",
+                    "T1555.003": "Credentials from Web Browsers",
+                    "T1558.002": "Silver Ticket",
+                    "T1558.001": "Golden Ticket",
+                    "T1555": "Credentials from Password Stores",
+                    "T1003.006": "DCSync",
+                    "T1003.002": "Security Account Manager",
+                    "T1003.001": "LSASS Memory",
+                    "T1552.004": "Private Keys",
+                    "T1550.003": "Pass the Ticket",
+                    "T1550.002": "Pass the Hash",
+                    "T1547.005": "Security Support Provider",
+                    "T1207": "Rogue Domain Controller",
+                    "T1098": "Account Manipulation"
+                }
+            },
+            "val": 16
+        },
+        {
+            "id": "G0075",
+            "type": "group",
+            "attributes": {
+                "val": 4,
+                "name": "Rancor",
+                "aliases": [],
+                "description": "Rancor is a threat group that has led targeted campaigns against the South East Asia region. Rancor uses politically-motivated lures to entice victims to open malicious documents.",
+                "affiliation": "",
+                "targets": [],
+                "speciality": [],
+                "tools": {
+                    "S0254": "PLAINTEE",
+                    "S0255": "DDKONG",
+                    "S0160": "certutil",
+                    "S0075": "Reg"
+                },
+                "techniques": {
+                    "T1071.001": "Web Protocols",
+                    "T1204.002": "Malicious File",
+                    "T1059.005": "Visual Basic",
+                    "T1059.003": "Windows Command Shell",
+                    "T1566.001": "Spearphishing Attachment",
+                    "T1218.007": "Msiexec",
+                    "T1053.005": "Scheduled Task",
+                    "T1105": "Ingress Tool Transfer"
+                }
+            }
+        },
+        {
+            "id": "S0254",
+            "type": "tool",
+            "attributes": {
+                "name": "PLAINTEE",
+                "aliases": [],
+                "labels": [
+                    "malware"
+                ],
+                "description": "PLAINTEE is a malware sample that has been used by Rancor in targeted attacks in Singapore and Cambodia.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1573.001": "Symmetric Cryptography",
+                    "T1059.003": "Windows Command Shell",
+                    "T1548.002": "Bypass User Account Control",
+                    "T1547.001": "Registry Run Keys / Startup Folder",
+                    "T1112": "Modify Registry",
+                    "T1105": "Ingress Tool Transfer",
+                    "T1094": "Custom Command and Control Protocol",
+                    "T1082": "System Information Discovery",
+                    "T1057": "Process Discovery",
+                    "T1016": "System Network Configuration Discovery"
+                }
+            },
+            "val": 10
+        },
+        {
+            "id": "S0255",
+            "type": "tool",
+            "attributes": {
+                "name": "DDKONG",
+                "aliases": [],
+                "labels": [
+                    "malware"
+                ],
+                "description": "DDKONG is a malware sample that was part of a campaign by Rancor. DDKONG was first seen used in February 2017.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1218.011": "Rundll32",
+                    "T1140": "Deobfuscate/Decode Files or Information",
+                    "T1105": "Ingress Tool Transfer",
+                    "T1094": "Custom Command and Control Protocol",
+                    "T1083": "File and Directory Discovery"
+                }
+            },
+            "val": 5
+        },
+        {
+            "id": "S0160",
+            "type": "tool",
+            "attributes": {
+                "name": "certutil",
+                "aliases": [
+                    "certutil.exe"
+                ],
+                "labels": [
+                    "tool"
+                ],
+                "description": "certutil is a command-line utility that can be used to obtain certificate authority information and configure Certificate Services.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1553.004": "Install Root Certificate",
+                    "T1140": "Deobfuscate/Decode Files or Information",
+                    "T1105": "Ingress Tool Transfer"
+                }
+            },
+            "val": 3
+        },
+        {
+            "id": "S0075",
+            "type": "tool",
+            "attributes": {
+                "name": "Reg",
+                "aliases": [
+                    "reg.exe"
+                ],
+                "labels": [
+                    "tool"
+                ],
+                "description": "Reg is a Windows utility used to interact with the Windows Registry. It can be used at the command-line interface to query, add, modify, and remove information. \n\nUtilities such as Reg are known to be used by persistent threats.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1552.002": "Credentials in Registry",
+                    "T1112": "Modify Registry",
+                    "T1012": "Query Registry"
+                }
+            },
+            "val": 3
+        },
+        {
+            "id": "G0059",
+            "type": "group",
+            "attributes": {
+                "val": 4,
+                "name": "Magic Hound",
+                "aliases": [
+                    "COBALT ILLUSION",
+                    "Charming Kitten",
+                    "ITG18",
+                    "Phosphorus",
+                    "Newscaster",
+                    "APT35"
+                ],
+                "description": "Magic Hound is an Iranian-sponsored threat group that conducts long term, resource-intensive cyber espionage operations, dating back as early as 2014. The group typically targets U.S. and Middle Eastern military organizations, as well as other government personnel, via complex social engineering campaigns.",
+                "affiliation": "",
+                "targets": [],
+                "speciality": [],
+                "tools": {
+                    "S0192": "Pupy",
+                    "S0186": "DownPaper",
+                    "S0029": "PsExec",
+                    "S0002": "Mimikatz"
+                },
+                "techniques": {
+                    "T1589.001": "Credentials",
+                    "T1586.002": "Email Accounts",
+                    "T1585.002": "Email Accounts",
+                    "T1071.001": "Web Protocols",
+                    "T1102.002": "Bidirectional Communication",
+                    "T1571": "Non-Standard Port",
+                    "T1564.003": "Hidden Window",
+                    "T1059.005": "Visual Basic",
+                    "T1059.003": "Windows Command Shell",
+                    "T1059.001": "PowerShell",
+                    "T1566.003": "Spearphishing via Service",
+                    "T1566.002": "Spearphishing Link",
+                    "T1560.001": "Archive via Utility",
+                    "T1114.001": "Local Email Collection",
+                    "T1056.001": "Keylogging",
+                    "T1003.001": "LSASS Memory",
+                    "T1070.004": "File Deletion",
+                    "T1547.001": "Registry Run Keys / Startup Folder",
+                    "T1098.002": "Exchange Email Delegate Permissions",
+                    "T1113": "Screen Capture",
+                    "T1105": "Ingress Tool Transfer",
+                    "T1083": "File and Directory Discovery",
+                    "T1082": "System Information Discovery",
+                    "T1071": "Application Layer Protocol",
+                    "T1065": "Uncommonly Used Port",
+                    "T1057": "Process Discovery",
+                    "T1043": "Commonly Used Port",
+                    "T1033": "System Owner/User Discovery",
+                    "T1027": "Obfuscated Files or Information",
+                    "T1016": "System Network Configuration Discovery"
+                }
+            }
+        },
+        {
+            "id": "S0192",
+            "type": "tool",
+            "attributes": {
+                "name": "Pupy",
+                "aliases": [],
+                "labels": [
+                    "tool"
+                ],
+                "description": "Pupy is an open source, cross-platform (Windows, Linux, OSX, Android) remote administration and post-exploitation tool.  It is written in Python and can be generated as a payload in several different ways (Windows exe, Python file, PowerShell oneliner/file, Linux elf, APK, Rubber Ducky, etc.).  Pupy is publicly available on GitHub.",
+                "platforms": [
+                    "Linux",
+                    "Windows",
+                    "macOS",
+                    "Android"
+                ],
+                "techniques": {
+                    "T1573.002": "Asymmetric Cryptography",
+                    "T1071.001": "Web Protocols",
+                    "T1569.002": "Service Execution",
+                    "T1059.006": "Python",
+                    "T1059.001": "PowerShell",
+                    "T1497.001": "System Checks",
+                    "T1087.001": "Local Account",
+                    "T1003.004": "LSA Secrets",
+                    "T1003.005": "Cached Domain Credentials",
+                    "T1560.001": "Archive via Utility",
+                    "T1114.001": "Local Email Collection",
+                    "T1134.001": "Token Impersonation/Theft",
+                    "T1555.003": "Credentials from Web Browsers",
+                    "T1557.001": "LLMNR/NBT-NS Poisoning and SMB Relay",
+                    "T1056.001": "Keylogging",
+                    "T1555": "Credentials from Password Stores",
+                    "T1003.001": "LSASS Memory",
+                    "T1021.001": "Remote Desktop Protocol",
+                    "T1552.001": "Credentials In Files",
+                    "T1550.003": "Pass the Ticket",
+                    "T1548.002": "Bypass User Account Control",
+                    "T1070.001": "Clear Windows Event Logs",
+                    "T1136.002": "Domain Account",
+                    "T1136.001": "Local Account",
+                    "T1547.001": "Registry Run Keys / Startup Folder",
+                    "T1543.002": "Systemd Service",
+                    "T1055.001": "Dynamic-link Library Injection",
+                    "T1135": "Network Share Discovery",
+                    "T1125": "Video Capture",
+                    "T1123": "Audio Capture",
+                    "T1113": "Screen Capture",
+                    "T1105": "Ingress Tool Transfer",
+                    "T1083": "File and Directory Discovery",
+                    "T1082": "System Information Discovery",
+                    "T1057": "Process Discovery",
+                    "T1049": "System Network Connections Discovery",
+                    "T1046": "Network Service Scanning",
+                    "T1041": "Exfiltration Over C2 Channel",
+                    "T1033": "System Owner/User Discovery",
+                    "T1016": "System Network Configuration Discovery"
+                }
+            },
+            "val": 40
+        },
+        {
+            "id": "S0186",
+            "type": "tool",
+            "attributes": {
+                "name": "DownPaper",
+                "aliases": [],
+                "labels": [
+                    "malware"
+                ],
+                "description": "DownPaper is a backdoor Trojan; its main functionality is to download and run second stage malware.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1071.001": "Web Protocols",
+                    "T1059.003": "Windows Command Shell",
+                    "T1059.001": "PowerShell",
+                    "T1547.001": "Registry Run Keys / Startup Folder",
+                    "T1082": "System Information Discovery",
+                    "T1033": "System Owner/User Discovery",
+                    "T1012": "Query Registry"
+                }
+            },
+            "val": 7
+        },
+        {
+            "id": "G0055",
+            "type": "group",
+            "attributes": {
+                "val": 1,
+                "name": "NEODYMIUM",
+                "aliases": [],
+                "description": "NEODYMIUM is an activity group that conducted a campaign in May 2016 and has heavily targeted Turkish victims. The group has demonstrated similarity to another activity group called PROMETHIUM due to overlapping victim and campaign characteristics.   NEODYMIUM is reportedly associated closely with BlackOasis operations, but evidence that the group names are aliases has not been identified.",
+                "affiliation": "",
+                "targets": [],
+                "speciality": [],
+                "tools": {
+                    "S0176": "Wingbird"
+                },
+                "techniques": {}
+            }
+        },
+        {
+            "id": "S0176",
+            "type": "tool",
+            "attributes": {
+                "name": "Wingbird",
+                "aliases": [],
+                "labels": [
+                    "malware"
+                ],
+                "description": "Wingbird is a backdoor that appears to be a version of commercial software FinFisher. It is reportedly used to attack individual computers instead of networks. It was used by NEODYMIUM in a May 2016 campaign.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1574.002": "DLL Side-Loading",
+                    "T1569.002": "Service Execution",
+                    "T1518.001": "Security Software Discovery",
+                    "T1070.004": "File Deletion",
+                    "T1547.008": "LSASS Driver",
+                    "T1543.003": "Windows Service",
+                    "T1082": "System Information Discovery",
+                    "T1068": "Exploitation for Privilege Escalation",
+                    "T1055": "Process Injection"
+                }
+            },
+            "val": 9
+        },
+        {
+            "id": "G0049",
+            "type": "group",
+            "attributes": {
+                "val": 20,
+                "name": "OilRig",
+                "aliases": [
+                    "COBALT GYPSY",
+                    "IRN2",
+                    "HELIX KITTEN",
+                    "APT34"
+                ],
+                "description": "OilRig is a suspected Iranian threat group that has targeted Middle Eastern and international victims since at least 2014. The group has targeted a variety of industries, including financial, government, energy, chemical, and telecommunications, and has largely focused its operations within the Middle East. It appears the group carries out supply chain attacks, leveraging the trust relationship between organizations to attack their primary targets. FireEye assesses that the group works on behalf of the Iranian government based on infrastructure details that contain references to Iran, use of Iranian infrastructure, and targeting that aligns with nation-state interests.       This group was previously tracked under two distinct groups, APT34 and OilRig, but was combined due to additional reporting giving higher confidence about the overlap of the activity.",
+                "affiliation": "",
+                "targets": [],
+                "speciality": [],
+                "tools": {
+                    "S0495": "RDAT",
+                    "S0360": "BONDUPDATER",
+                    "S0349": "LaZagne",
+                    "S0264": "OopsIE",
+                    "S0269": "QUADAGENT",
+                    "S0258": "RGDoor",
+                    "S0185": "SEASHARPEE",
+                    "S0189": "ISMInjector",
+                    "S0184": "POWRUNER",
+                    "S0170": "Helminth",
+                    "S0160": "certutil",
+                    "S0104": "netstat",
+                    "S0100": "ipconfig",
+                    "S0096": "Systeminfo",
+                    "S0095": "FTP",
+                    "S0075": "Reg",
+                    "S0057": "Tasklist",
+                    "S0039": "Net",
+                    "S0029": "PsExec",
+                    "S0002": "Mimikatz"
+                },
+                "techniques": {
+                    "T1555.004": "Windows Credential Manager",
+                    "T1027.005": "Indicator Removal from Tools",
+                    "T1573.002": "Asymmetric Cryptography",
+                    "T1071.004": "DNS",
+                    "T1071.001": "Web Protocols",
+                    "T1572": "Protocol Tunneling",
+                    "T1048.003": "Exfiltration Over Unencrypted/Obfuscated Non-C2 Protocol",
+                    "T1069.001": "Local Groups",
+                    "T1204.002": "Malicious File",
+                    "T1204.001": "Malicious Link",
+                    "T1059.003": "Windows Command Shell",
+                    "T1059.001": "PowerShell",
+                    "T1566.003": "Spearphishing via Service",
+                    "T1566.002": "Spearphishing Link",
+                    "T1566.001": "Spearphishing Attachment",
+                    "T1069.002": "Domain Groups",
+                    "T1087.002": "Domain Account",
+                    "T1087.001": "Local Account",
+                    "T1003.004": "LSA Secrets",
+                    "T1003.005": "Cached Domain Credentials",
+                    "T1555.003": "Credentials from Web Browsers",
+                    "T1056.001": "Keylogging",
+                    "T1555": "Credentials from Password Stores",
+                    "T1003.001": "LSASS Memory",
+                    "T1021.004": "SSH",
+                    "T1021.001": "Remote Desktop Protocol",
+                    "T1552.001": "Credentials In Files",
+                    "T1070.004": "File Deletion",
+                    "T1218.001": "Compiled HTML File",
+                    "T1505.003": "Web Shell",
+                    "T1053.005": "Scheduled Task",
+                    "T1137.004": "Outlook Home Page",
+                    "T1201": "Password Policy Discovery",
+                    "T1140": "Deobfuscate/Decode Files or Information",
+                    "T1133": "External Remote Services",
+                    "T1119": "Automated Collection",
+                    "T1113": "Screen Capture",
+                    "T1110": "Brute Force",
+                    "T1105": "Ingress Tool Transfer",
+                    "T1094": "Custom Command and Control Protocol",
+                    "T1082": "System Information Discovery",
+                    "T1078": "Valid Accounts",
+                    "T1059": "Command and Scripting Interpreter",
+                    "T1057": "Process Discovery",
+                    "T1049": "System Network Connections Discovery",
+                    "T1047": "Windows Management Instrumentation",
+                    "T1046": "Network Service Scanning",
+                    "T1043": "Commonly Used Port",
+                    "T1033": "System Owner/User Discovery",
+                    "T1027": "Obfuscated Files or Information",
+                    "T1016": "System Network Configuration Discovery",
+                    "T1012": "Query Registry",
+                    "T1008": "Fallback Channels",
+                    "T1007": "System Service Discovery",
+                    "T0853": "Scripting",
+                    "T0869": "Standard Application Layer Protocol",
+                    "T0859": "Valid Accounts",
+                    "T0865": "Spearphishing Attachment",
+                    "T0817": "Drive-by Compromise"
+                }
+            }
+        },
+        {
+            "id": "S0495",
+            "type": "tool",
+            "attributes": {
+                "name": "RDAT",
+                "aliases": [
+                    "RDAT "
+                ],
+                "labels": [
+                    "malware"
+                ],
+                "description": "RDAT is a backdoor used by the suspected Iranian threat group OilRig. RDAT was originally identified in 2017 and targeted companies in the telecommunications sector.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1573.001": "Symmetric Cryptography",
+                    "T1071.004": "DNS",
+                    "T1071.003": "Mail Protocols",
+                    "T1071.001": "Web Protocols",
+                    "T1001.002": "Steganography",
+                    "T1132.002": "Non-Standard Encoding",
+                    "T1132.001": "Standard Encoding",
+                    "T1059.003": "Windows Command Shell",
+                    "T1036.005": "Match Legitimate Name or Location",
+                    "T1036.004": "Masquerade Task or Service",
+                    "T1027.003": "Steganography",
+                    "T1070.004": "File Deletion",
+                    "T1543.003": "Windows Service",
+                    "T1140": "Deobfuscate/Decode Files or Information",
+                    "T1113": "Screen Capture",
+                    "T1105": "Ingress Tool Transfer",
+                    "T1041": "Exfiltration Over C2 Channel",
+                    "T1030": "Data Transfer Size Limits",
+                    "T1008": "Fallback Channels",
+                    "T1001": "Data Obfuscation"
+                }
+            },
+            "val": 20
+        },
+        {
+            "id": "S0360",
+            "type": "tool",
+            "attributes": {
+                "name": "BONDUPDATER",
+                "aliases": [],
+                "labels": [
+                    "malware"
+                ],
+                "description": "BONDUPDATER is a PowerShell backdoor used by OilRig. It was first observed in November 2017 during targeting of a Middle Eastern government organization, and an updated version was observed in August 2018 being used to target a government organization with spearphishing emails.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1071.004": "DNS",
+                    "T1564.003": "Hidden Window",
+                    "T1568.002": "Domain Generation Algorithms",
+                    "T1059.003": "Windows Command Shell",
+                    "T1059.001": "PowerShell",
+                    "T1053.005": "Scheduled Task",
+                    "T1105": "Ingress Tool Transfer"
+                }
+            },
+            "val": 7
+        },
+        {
+            "id": "S0349",
+            "type": "tool",
+            "attributes": {
+                "name": "LaZagne",
+                "aliases": [],
+                "labels": [
+                    "tool"
+                ],
+                "description": "LaZagne is a post-exploitation, open-source tool used to recover stored passwords on a system. It has modules for Windows, Linux, and OSX, but is mainly focused on Windows systems. LaZagne is publicly available on GitHub.",
+                "platforms": [
+                    "Linux",
+                    "macOS",
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1555.004": "Windows Credential Manager",
+                    "T1003.004": "LSA Secrets",
+                    "T1003.005": "Cached Domain Credentials",
+                    "T1555.003": "Credentials from Web Browsers",
+                    "T1555.001": "Keychain",
+                    "T1555": "Credentials from Password Stores",
+                    "T1003.008": "/etc/passwd and /etc/shadow",
+                    "T1003.007": "Proc Filesystem",
+                    "T1003.001": "LSASS Memory",
+                    "T1552.001": "Credentials In Files"
+                }
+            },
+            "val": 10
+        },
+        {
+            "id": "S0264",
+            "type": "tool",
+            "attributes": {
+                "name": "OopsIE",
+                "aliases": [],
+                "labels": [
+                    "malware"
+                ],
+                "description": "OopsIE is a Trojan used by OilRig to remotely execute commands as well as upload/download files to/from victims.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1071.001": "Web Protocols",
+                    "T1132.001": "Standard Encoding",
+                    "T1074.001": "Local Data Staging",
+                    "T1059.005": "Visual Basic",
+                    "T1059.003": "Windows Command Shell",
+                    "T1497.001": "System Checks",
+                    "T1560.003": "Archive via Custom Method",
+                    "T1560.001": "Archive via Utility",
+                    "T1027.002": "Software Packing",
+                    "T1070.004": "File Deletion",
+                    "T1053.005": "Scheduled Task",
+                    "T1140": "Deobfuscate/Decode Files or Information",
+                    "T1124": "System Time Discovery",
+                    "T1105": "Ingress Tool Transfer",
+                    "T1082": "System Information Discovery",
+                    "T1047": "Windows Management Instrumentation",
+                    "T1041": "Exfiltration Over C2 Channel",
+                    "T1030": "Data Transfer Size Limits",
+                    "T1027": "Obfuscated Files or Information"
+                }
+            },
+            "val": 19
+        },
+        {
+            "id": "S0269",
+            "type": "tool",
+            "attributes": {
+                "name": "QUADAGENT",
+                "aliases": [],
+                "labels": [
+                    "malware"
+                ],
+                "description": "QUADAGENT is a PowerShell backdoor used by OilRig.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1071.004": "DNS",
+                    "T1071.001": "Web Protocols",
+                    "T1132.001": "Standard Encoding",
+                    "T1059.005": "Visual Basic",
+                    "T1059.003": "Windows Command Shell",
+                    "T1059.001": "PowerShell",
+                    "T1036.005": "Match Legitimate Name or Location",
+                    "T1070.004": "File Deletion",
+                    "T1053.005": "Scheduled Task",
+                    "T1140": "Deobfuscate/Decode Files or Information",
+                    "T1112": "Modify Registry",
+                    "T1033": "System Owner/User Discovery",
+                    "T1027": "Obfuscated Files or Information",
+                    "T1016": "System Network Configuration Discovery",
+                    "T1012": "Query Registry",
+                    "T1008": "Fallback Channels"
+                }
+            },
+            "val": 16
+        },
+        {
+            "id": "S0258",
+            "type": "tool",
+            "attributes": {
+                "name": "RGDoor",
+                "aliases": [],
+                "labels": [
+                    "malware"
+                ],
+                "description": "RGDoor is a malicious Internet Information Services (IIS) backdoor developed in the C++ language. RGDoor has been seen deployed on webservers belonging to the Middle East government organizations. RGDoor provides backdoor access to compromised IIS servers.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1071.001": "Web Protocols",
+                    "T1059.003": "Windows Command Shell",
+                    "T1560.003": "Archive via Custom Method",
+                    "T1140": "Deobfuscate/Decode Files or Information",
+                    "T1105": "Ingress Tool Transfer",
+                    "T1033": "System Owner/User Discovery"
+                }
+            },
+            "val": 6
+        },
+        {
+            "id": "S0185",
+            "type": "tool",
+            "attributes": {
+                "name": "SEASHARPEE",
+                "aliases": [],
+                "labels": [
+                    "malware"
+                ],
+                "description": "SEASHARPEE is a Web shell that has been used by OilRig.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1059.003": "Windows Command Shell",
+                    "T1070.006": "Timestomp",
+                    "T1505.003": "Web Shell",
+                    "T1105": "Ingress Tool Transfer"
+                }
+            },
+            "val": 4
+        },
+        {
+            "id": "S0189",
+            "type": "tool",
+            "attributes": {
+                "name": "ISMInjector",
+                "aliases": [],
+                "labels": [
+                    "malware"
+                ],
+                "description": "ISMInjector is a Trojan used to install another OilRig backdoor, ISMAgent.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1055.012": "Process Hollowing",
+                    "T1053.005": "Scheduled Task",
+                    "T1140": "Deobfuscate/Decode Files or Information",
+                    "T1027": "Obfuscated Files or Information"
+                }
+            },
+            "val": 4
+        },
+        {
+            "id": "S0184",
+            "type": "tool",
+            "attributes": {
+                "name": "POWRUNER",
+                "aliases": [],
+                "labels": [
+                    "malware"
+                ],
+                "description": "POWRUNER is a PowerShell script that sends and receives commands to and from the C2 server.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1071.004": "DNS",
+                    "T1071.001": "Web Protocols",
+                    "T1132.001": "Standard Encoding",
+                    "T1069.001": "Local Groups",
+                    "T1059.003": "Windows Command Shell",
+                    "T1059.001": "PowerShell",
+                    "T1518.001": "Security Software Discovery",
+                    "T1069.002": "Domain Groups",
+                    "T1087.002": "Domain Account",
+                    "T1053.005": "Scheduled Task",
+                    "T1113": "Screen Capture",
+                    "T1105": "Ingress Tool Transfer",
+                    "T1083": "File and Directory Discovery",
+                    "T1082": "System Information Discovery",
+                    "T1057": "Process Discovery",
+                    "T1049": "System Network Connections Discovery",
+                    "T1047": "Windows Management Instrumentation",
+                    "T1033": "System Owner/User Discovery",
+                    "T1016": "System Network Configuration Discovery",
+                    "T1012": "Query Registry"
+                }
+            },
+            "val": 20
+        },
+        {
+            "id": "S0170",
+            "type": "tool",
+            "attributes": {
+                "name": "Helminth",
+                "aliases": [],
+                "labels": [
+                    "malware"
+                ],
+                "description": "Helminth is a backdoor that has at least two variants - one written in VBScript and PowerShell that is delivered via a macros in Excel spreadsheets, and one that is a standalone Windows executable.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1573.001": "Symmetric Cryptography",
+                    "T1071.004": "DNS",
+                    "T1071.001": "Web Protocols",
+                    "T1132.001": "Standard Encoding",
+                    "T1074.001": "Local Data Staging",
+                    "T1069.001": "Local Groups",
+                    "T1059.005": "Visual Basic",
+                    "T1059.003": "Windows Command Shell",
+                    "T1059.001": "PowerShell",
+                    "T1069.002": "Domain Groups",
+                    "T1056.001": "Keylogging",
+                    "T1553.002": "Code Signing",
+                    "T1547.009": "Shortcut Modification",
+                    "T1547.001": "Registry Run Keys / Startup Folder",
+                    "T1053.005": "Scheduled Task",
+                    "T1119": "Automated Collection",
+                    "T1115": "Clipboard Data",
+                    "T1105": "Ingress Tool Transfer",
+                    "T1057": "Process Discovery",
+                    "T1030": "Data Transfer Size Limits",
+                    "T1027": "Obfuscated Files or Information"
+                }
+            },
+            "val": 21
+        },
+        {
+            "id": "S0104",
+            "type": "tool",
+            "attributes": {
+                "name": "netstat",
+                "aliases": [
+                    "netstat.exe"
+                ],
+                "labels": [
+                    "tool"
+                ],
+                "description": "netstat is an operating system utility that displays active TCP connections, listening ports, and network statistics.",
+                "platforms": [
+                    "Windows",
+                    "Linux",
+                    "macOS"
+                ],
+                "techniques": {
+                    "T1049": "System Network Connections Discovery"
+                }
+            },
+            "val": 1
+        },
+        {
+            "id": "S0100",
+            "type": "tool",
+            "attributes": {
+                "name": "ipconfig",
+                "aliases": [
+                    "ipconfig.exe"
+                ],
+                "labels": [
+                    "tool"
+                ],
+                "description": "ipconfig is a Windows utility that can be used to find information about a system's TCP/IP, DNS, DHCP, and adapter configuration.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1016": "System Network Configuration Discovery"
+                }
+            },
+            "val": 1
+        },
+        {
+            "id": "S0096",
+            "type": "tool",
+            "attributes": {
+                "name": "Systeminfo",
+                "aliases": [
+                    "systeminfo.exe"
+                ],
+                "labels": [
+                    "tool"
+                ],
+                "description": "Systeminfo is a Windows utility that can be used to gather detailed information about a computer.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1082": "System Information Discovery"
+                }
+            },
+            "val": 1
+        },
+        {
+            "id": "S0095",
+            "type": "tool",
+            "attributes": {
+                "name": "FTP",
+                "aliases": [
+                    "ftp.exe"
+                ],
+                "labels": [
+                    "tool"
+                ],
+                "description": "FTP is a utility commonly available with operating systems to transfer information over the File Transfer Protocol (FTP). Adversaries can use it to transfer other tools onto a system or to exfiltrate data.",
+                "platforms": [
+                    "Linux",
+                    "Windows",
+                    "macOS"
+                ],
+                "techniques": {
+                    "T1048.003": "Exfiltration Over Unencrypted/Obfuscated Non-C2 Protocol",
+                    "T1043": "Commonly Used Port"
+                }
+            },
+            "val": 2
+        },
+        {
+            "id": "S0057",
+            "type": "tool",
+            "attributes": {
+                "name": "Tasklist",
+                "aliases": [],
+                "labels": [
+                    "tool"
+                ],
+                "description": "The Tasklist utility displays a list of applications and services with their Process IDs (PID) for all tasks running on either a local or a remote computer. It is packaged with Windows operating systems and can be executed from the command-line interface.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1518.001": "Security Software Discovery",
+                    "T1057": "Process Discovery",
+                    "T1007": "System Service Discovery"
+                }
+            },
+            "val": 3
+        },
+        {
+            "id": "S0039",
+            "type": "tool",
+            "attributes": {
+                "name": "Net",
+                "aliases": [
+                    "net.exe"
+                ],
+                "labels": [
+                    "tool"
+                ],
+                "description": "The Net utility is a component of the Windows operating system. It is used in command-line operations for control of users, groups, services, and network connections. \n\nNet has a great deal of functionality,  much of which is useful for an adversary, such as gathering system and network information for Discovery, moving laterally through SMB/Windows Admin Shares using <code>net use</code> commands, and interacting with services. The net1.exe utility is executed for certain functionality when net.exe is run and can be used directly in commands such as <code>net1 user</code>.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1069.001": "Local Groups",
+                    "T1569.002": "Service Execution",
+                    "T1069.002": "Domain Groups",
+                    "T1087.002": "Domain Account",
+                    "T1087.001": "Local Account",
+                    "T1021.002": "SMB/Windows Admin Shares",
+                    "T1070.005": "Network Share Connection Removal",
+                    "T1136.002": "Domain Account",
+                    "T1136.001": "Local Account",
+                    "T1201": "Password Policy Discovery",
+                    "T1135": "Network Share Discovery",
+                    "T1124": "System Time Discovery",
+                    "T1049": "System Network Connections Discovery",
+                    "T1018": "Remote System Discovery",
+                    "T1007": "System Service Discovery"
+                }
+            },
+            "val": 15
+        },
+        {
+            "id": "G0034",
+            "type": "group",
+            "attributes": {
+                "val": 10,
+                "name": "Sandworm Team",
+                "aliases": [
+                    "ELECTRUM",
+                    "Telebots",
+                    "IRON VIKING",
+                    "BlackEnergy (Group)",
+                    "Quedagh",
+                    "VOODOO BEAR"
+                ],
+                "description": "Sandworm Team is a destructive threat group that has been attributed to Russia's General Staff Main Intelligence Directorate (GRU) Main Center for Special Technologies (GTsST) military unit 74455. This group has been active since at least 2009.\n\nIn October 2020, the US indicted six GRU Unit 74455 officers associated with Sandworm Team for the following cyber operations: the 2015 and 2016 attacks against Ukrainian electrical companies and government organizations, the 2017 worldwide NotPetya attack, targeting of the 2017 French presidential campaign, the 2018 Olympic Destroyer attack against the Winter Olympic Games, the 2018 operation against the Organisation for the Prohibition of Chemical Weapons, and attacks against the country of Georgia in 2018 and 2019. Some of these were conducted with the assistance of GRU Unit 26165, which is also referred to as APT28.",
+                "affiliation": "",
+                "targets": [],
+                "speciality": [],
+                "tools": {
+                    "S0598": "P.A.S. Webshell",
+                    "S0401": "Exaramel for Linux",
+                    "S0368": "NotPetya",
+                    "S0365": "Olympic Destroyer",
+                    "S0343": "Exaramel for Windows",
+                    "S0231": "Invoke-PSImage",
+                    "S0089": "BlackEnergy",
+                    "S0555": "CHEMISTGAMES",
+                    "S1004": "Industroyer",
+                    "S1005": "Killdisk"
+                },
+                "techniques": {
+                    "T1588.006": "Vulnerabilities",
+                    "T1598.003": "Spearphishing Link",
+                    "T1595.002": "Vulnerability Scanning",
+                    "T1594": "Search Victim-Owned Websites",
+                    "T1593": "Search Open Websites/Domains",
+                    "T1592.002": "Software",
+                    "T1591.002": "Business Relationships",
+                    "T1590.001": "Domain Properties",
+                    "T1589.003": "Employee Names",
+                    "T1589.002": "Email Addresses",
+                    "T1588.002": "Tool",
+                    "T1587.001": "Malware",
+                    "T1585.002": "Email Accounts",
+                    "T1585.001": "Social Media Accounts",
+                    "T1583.004": "Server",
+                    "T1583.001": "Domains",
+                    "T1071.001": "Web Protocols",
+                    "T1132.001": "Standard Encoding",
+                    "T1102.002": "Bidirectional Communication",
+                    "T1571": "Non-Standard Port",
+                    "T1078.002": "Domain Accounts",
+                    "T1204.002": "Malicious File",
+                    "T1204.001": "Malicious Link",
+                    "T1195.002": "Compromise Software Supply Chain",
+                    "T1059.005": "Visual Basic",
+                    "T1059.001": "PowerShell",
+                    "T1566.002": "Spearphishing Link",
+                    "T1566.001": "Spearphishing Attachment",
+                    "T1087.003": "Email Account",
+                    "T1087.002": "Domain Account",
+                    "T1561.002": "Disk Structure Wipe",
+                    "T1491.002": "External Defacement",
+                    "T1555.003": "Credentials from Web Browsers",
+                    "T1056.001": "Keylogging",
+                    "T1003.001": "LSASS Memory",
+                    "T1036.005": "Match Legitimate Name or Location",
+                    "T1070.004": "File Deletion",
+                    "T1218.011": "Rundll32",
+                    "T1505.003": "Web Shell",
+                    "T1499": "Endpoint Denial of Service",
+                    "T1485": "Data Destruction",
+                    "T1219": "Remote Access Software",
+                    "T1203": "Exploitation for Client Execution",
+                    "T1199": "Trusted Relationship",
+                    "T1140": "Deobfuscate/Decode Files or Information",
+                    "T1133": "External Remote Services",
+                    "T1105": "Ingress Tool Transfer",
+                    "T1090": "Proxy",
+                    "T1083": "File and Directory Discovery",
+                    "T1082": "System Information Discovery",
+                    "T1078": "Valid Accounts",
+                    "T1049": "System Network Connections Discovery",
+                    "T1041": "Exfiltration Over C2 Channel",
+                    "T1040": "Network Sniffing",
+                    "T1033": "System Owner/User Discovery",
+                    "T1027": "Obfuscated Files or Information",
+                    "T1018": "Remote System Discovery",
+                    "T1016": "System Network Configuration Discovery",
+                    "T1005": "Data from Local System",
+                    "T0886": "Remote Services",
+                    "T0822": "External Remote Services",
+                    "T0859": "Valid Accounts",
+                    "T0819": "Exploit Public-Facing Application",
+                    "T0823": "Graphical User Interface",
+                    "T0857": "System Firmware",
+                    "T0803": "Block Command Message",
+                    "T0816": "Device Restart/Shutdown",
+                    "T0865": "Spearphishing Attachment",
+                    "T0804": "Block Reporting Message",
+                    "T0855": "Unauthorized Command Message"
+                }
+            }
+        },
+        {
+            "id": "S0598",
+            "type": "tool",
+            "attributes": {
+                "name": "P.A.S. Webshell",
+                "aliases": [
+                    "Fobushell"
+                ],
+                "labels": [
+                    "malware"
+                ],
+                "description": "P.A.S. Webshell is a publicly available multifunctional PHP webshell in use since at least 2016 that provides remote access and execution on target web servers.",
+                "platforms": [
+                    "Linux",
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1071.001": "Web Protocols",
+                    "T1087.001": "Local Account",
+                    "T1110.001": "Password Guessing",
+                    "T1222.002": "Linux and Mac File and Directory Permissions Modification",
+                    "T1070.004": "File Deletion",
+                    "T1505.003": "Web Shell",
+                    "T1518": "Software Discovery",
+                    "T1213": "Data from Information Repositories",
+                    "T1140": "Deobfuscate/Decode Files or Information",
+                    "T1105": "Ingress Tool Transfer",
+                    "T1083": "File and Directory Discovery",
+                    "T1059": "Command and Scripting Interpreter",
+                    "T1046": "Network Service Scanning",
+                    "T1027": "Obfuscated Files or Information",
+                    "T1005": "Data from Local System"
+                }
+            },
+            "val": 15
+        },
+        {
+            "id": "S0401",
+            "type": "tool",
+            "attributes": {
+                "name": "Exaramel for Linux",
+                "aliases": [],
+                "labels": [
+                    "malware"
+                ],
+                "description": "Exaramel for Linux is a backdoor written in the Go Programming Language and compiled as a 64-bit ELF binary. The Windows version is tracked separately under Exaramel for Windows.",
+                "platforms": [
+                    "Linux"
+                ],
+                "techniques": {
+                    "T1071.001": "Web Protocols",
+                    "T1059.004": "Unix Shell",
+                    "T1070.004": "File Deletion",
+                    "T1548.001": "Setuid and Setgid",
+                    "T1543.002": "Systemd Service",
+                    "T1543": "Create or Modify System Process",
+                    "T1053.003": "Cron",
+                    "T1140": "Deobfuscate/Decode Files or Information",
+                    "T1105": "Ingress Tool Transfer",
+                    "T1033": "System Owner/User Discovery",
+                    "T1027": "Obfuscated Files or Information",
+                    "T1008": "Fallback Channels"
+                }
+            },
+            "val": 12
+        },
+        {
+            "id": "S0368",
+            "type": "tool",
+            "attributes": {
+                "name": "NotPetya",
+                "aliases": [
+                    "ExPetr",
+                    "Diskcoder.C",
+                    "GoldenEye",
+                    "Petrwrap",
+                    "Nyetya"
+                ],
+                "labels": [
+                    "malware"
+                ],
+                "description": "NotPetya is malware that was used by Sandworm Team in a worldwide attack starting on June 27, 2017. While NotPetya appears as a form of ransomware, its main purpose was to destroy data and disk structures on compromised systems; the attackers never intended to make the encrypted data recoverable. As such, NotPetya may be more appropriately thought of as a form of wiper malware. NotPetya contains worm-like features to spread itself across a computer network using the SMBv1 exploits EternalBlue and EternalRomance.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1078.003": "Local Accounts",
+                    "T1569.002": "Service Execution",
+                    "T1518.001": "Security Software Discovery",
+                    "T1003.001": "LSASS Memory",
+                    "T1021.002": "SMB/Windows Admin Shares",
+                    "T1070.001": "Clear Windows Event Logs",
+                    "T1218.011": "Rundll32",
+                    "T1053.005": "Scheduled Task",
+                    "T1529": "System Shutdown/Reboot",
+                    "T1486": "Data Encrypted for Impact",
+                    "T1210": "Exploitation of Remote Services",
+                    "T1083": "File and Directory Discovery",
+                    "T1047": "Windows Management Instrumentation",
+                    "T1036": "Masquerading",
+                    "T0866": "Exploitation of Remote Services",
+                    "T0822": "External Remote Services",
+                    "T0828": "Loss of Productivity and Revenue",
+                    "T0867": "Lateral Tool Transfer"
+                }
+            },
+            "val": 18
+        },
+        {
+            "id": "S0365",
+            "type": "tool",
+            "attributes": {
+                "name": "Olympic Destroyer",
+                "aliases": [],
+                "labels": [
+                    "malware"
+                ],
+                "description": "Olympic Destroyer is malware that was used by Sandworm Team against the 2018 Winter Olympics, held in Pyeongchang, South Korea. The main purpose of the malware was to render infected computer systems inoperable. The malware leverages various native Windows utilities and API calls to carry out its destructive tasks. Olympic Destroyer has worm-like features to spread itself across a computer network in order to maximize its destructive impact.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1570": "Lateral Tool Transfer",
+                    "T1569.002": "Service Execution",
+                    "T1555.003": "Credentials from Web Browsers",
+                    "T1003.001": "LSASS Memory",
+                    "T1021.002": "SMB/Windows Admin Shares",
+                    "T1070.001": "Clear Windows Event Logs",
+                    "T1529": "System Shutdown/Reboot",
+                    "T1490": "Inhibit System Recovery",
+                    "T1489": "Service Stop",
+                    "T1485": "Data Destruction",
+                    "T1135": "Network Share Discovery",
+                    "T1047": "Windows Management Instrumentation",
+                    "T1018": "Remote System Discovery",
+                    "T1016": "System Network Configuration Discovery"
+                }
+            },
+            "val": 14
+        },
+        {
+            "id": "S0343",
+            "type": "tool",
+            "attributes": {
+                "name": "Exaramel for Windows",
+                "aliases": [],
+                "labels": [
+                    "malware"
+                ],
+                "description": "Exaramel for Windows is a backdoor used for targeting Windows systems. The Linux version is tracked separately under Exaramel for Linux.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1074.001": "Local Data Staging",
+                    "T1059.005": "Visual Basic",
+                    "T1059.003": "Windows Command Shell",
+                    "T1560": "Archive Collected Data",
+                    "T1036.004": "Masquerade Task or Service",
+                    "T1543.003": "Windows Service",
+                    "T1112": "Modify Registry"
+                }
+            },
+            "val": 7
+        },
+        {
+            "id": "S0231",
+            "type": "tool",
+            "attributes": {
+                "name": "Invoke-PSImage",
+                "aliases": [],
+                "labels": [
+                    "tool"
+                ],
+                "description": "Invoke-PSImage takes a PowerShell script and embeds the bytes of the script into the pixels of a PNG image. It generates a one liner for executing either from a file of from the web. Example of usage is embedding the PowerShell code from the Invoke-Mimikatz module and embed it into an image file. By calling the image file from a macro for example, the macro will download the picture and execute the PowerShell code, which in this case will dump the passwords.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1027": "Obfuscated Files or Information"
+                }
+            },
+            "val": 1
+        },
+        {
+            "id": "S0089",
+            "type": "tool",
+            "attributes": {
+                "name": "BlackEnergy",
+                "aliases": [
+                    "Black Energy"
+                ],
+                "labels": [
+                    "malware"
+                ],
+                "description": "BlackEnergy is a malware toolkit that has been used by both criminal and APT actors. It dates back to at least 2007 and was originally designed to create botnets for use in conducting Distributed Denial of Service (DDoS) attacks, but its use has evolved to support various plug-ins. It is well known for being used during the confrontation between Georgia and Russia in 2008, as well as in targeting Ukrainian institutions. Variants include BlackEnergy 2 and BlackEnergy 3.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1553.006": "Code Signing Policy Modification",
+                    "T1071.001": "Web Protocols",
+                    "T1574.010": "Services File Permissions Weakness",
+                    "T1555.003": "Credentials from Web Browsers",
+                    "T1056.001": "Keylogging",
+                    "T1021.002": "SMB/Windows Admin Shares",
+                    "T1552.001": "Credentials In Files",
+                    "T1548.002": "Bypass User Account Control",
+                    "T1070.001": "Clear Windows Event Logs",
+                    "T1547.009": "Shortcut Modification",
+                    "T1547.001": "Registry Run Keys / Startup Folder",
+                    "T1543.003": "Windows Service",
+                    "T1055.001": "Dynamic-link Library Injection",
+                    "T1485": "Data Destruction",
+                    "T1120": "Peripheral Device Discovery",
+                    "T1113": "Screen Capture",
+                    "T1083": "File and Directory Discovery",
+                    "T1082": "System Information Discovery",
+                    "T1070": "Indicator Removal on Host",
+                    "T1057": "Process Discovery",
+                    "T1049": "System Network Connections Discovery",
+                    "T1047": "Windows Management Instrumentation",
+                    "T1046": "Network Service Scanning",
+                    "T1016": "System Network Configuration Discovery",
+                    "T1008": "Fallback Channels",
+                    "T0869": "Standard Application Layer Protocol",
+                    "T0859": "Valid Accounts",
+                    "T0865": "Spearphishing Attachment"
+                }
+            },
+            "val": 28
+        },
+        {
+            "id": "S0555",
+            "type": "tool",
+            "attributes": {
+                "name": "CHEMISTGAMES",
+                "aliases": [],
+                "labels": [
+                    "malware"
+                ],
+                "description": "CHEMISTGAMES is a modular backdoor that has been deployed by Sandworm Team.",
+                "platforms": [
+                    "Android"
+                ],
+                "techniques": {
+                    "T1605": "Command-Line Interface",
+                    "T1575": "Native Code",
+                    "T1533": "Data from Local System",
+                    "T1521": "Standard Cryptographic Protocol",
+                    "T1474": "Supply Chain Compromise",
+                    "T1475": "Deliver Malicious App via Authorized App Store",
+                    "T1444": "Masquerade as Legitimate Application",
+                    "T1437": "Standard Application Layer Protocol",
+                    "T1406": "Obfuscated Files or Information",
+                    "T1426": "System Information Discovery",
+                    "T1407": "Download New Code at Runtime",
+                    "T1430": "Location Tracking"
+                }
+            },
+            "val": 12
+        },
+        {
+            "id": "S1004",
+            "type": "tool",
+            "attributes": {
+                "name": "Industroyer",
+                "aliases": [
+                    "CRASHOVERRIDE"
+                ],
+                "labels": [
+                    "malware"
+                ],
+                "description": "Industroyer is a sophisticated piece of malware designed to cause an Impact to the working processes of Industrial Control Systems (ICS), specifically ICSs used in electrical substations. Industroyer was alleged to be used in the attacks on the Ukrainian power grid in December 2016.)",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T0888": "Remote System Information Discovery",
+                    "T0837": "Loss of Protection",
+                    "T0800": "Activate Firmware Update Mode",
+                    "T0805": "Block Serial COM",
+                    "T0810": "Data Historian Compromise",
+                    "T0815": "Denial of View",
+                    "T0827": "Loss of Control",
+                    "T0806": "Brute Force I/O",
+                    "T0802": "Automated Collection",
+                    "T0831": "Manipulation of Control",
+                    "T0840": "Network Connection Enumeration",
+                    "T0881": "Service Stop",
+                    "T0803": "Block Command Message",
+                    "T0813": "Denial of Control",
+                    "T0816": "Device Restart/Shutdown",
+                    "T0880": "Loss of Safety",
+                    "T0832": "Manipulation of View",
+                    "T0846": "Remote System Discovery",
+                    "T0804": "Block Reporting Message",
+                    "T0807": "Command-Line Interface",
+                    "T0809": "Data Destruction",
+                    "T0814": "Denial of Service",
+                    "T0829": "Loss of View",
+                    "T0849": "Masquerading",
+                    "T0855": "Unauthorized Command Message"
+                }
+            },
+            "val": 25
+        },
+        {
+            "id": "S1005",
+            "type": "tool",
+            "attributes": {
+                "name": "Killdisk",
+                "aliases": [],
+                "labels": [
+                    "malware"
+                ],
+                "description": "In 2015 the BlackEnergy malware contained a component called KillDisk. KillDisk's main functionality is to overwrite files with random data, rendering the OS unbootable.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T0872": "Indicator Removal on Host",
+                    "T0881": "Service Stop",
+                    "T0809": "Data Destruction",
+                    "T0829": "Loss of View"
+                }
+            },
+            "val": 4
+        },
+        {
+            "id": "G0032",
+            "type": "group",
+            "attributes": {
+                "val": 23,
+                "name": "Lazarus Group",
+                "aliases": [
+                    "HIDDEN COBRA",
+                    "Guardians of Peace",
+                    "ZINC",
+                    "NICKEL ACADEMY"
+                ],
+                "description": "Lazarus Group is a threat group that has been attributed to the North Korean government. The group has been active since at least 2009 and was reportedly responsible for the November 2014 destructive wiper attack against Sony Pictures Entertainment as part of a campaign named Operation Blockbuster by Novetta. Malware used by Lazarus Group correlates to other reported campaigns, including Operation Flame, Operation 1Mission, Operation Troy, DarkSeoul, and Ten Days of Rain.  In late 2017, Lazarus Group used KillDisk, a disk-wiping tool, in an attack against an online casino based in Central America. \n\nNorth Korean group definitions are known to have significant overlap, and the name Lazarus Group is known to encompass a broad range of activity. Some organizations use the name Lazarus Group to refer to any activity attributed to North Korea. Some organizations track North Korean clusters or groups such as Bluenoroff, APT37, and APT38 separately, while other organizations may track some activity associated with those group names by the name Lazarus Group.",
+                "affiliation": "",
+                "targets": [],
+                "speciality": [],
+                "tools": {
+                    "S0593": "ECCENTRICBANDWAGON",
+                    "S0586": "TAINTEDSCRIBE",
+                    "S0584": "AppleJeus",
+                    "S0567": "Dtrack",
+                    "S0520": "BLINDINGCAN",
+                    "S0498": "Cryptoistic",
+                    "S0497": "Dacls",
+                    "S0431": "HotCroissant",
+                    "S0376": "HOPLIGHT",
+                    "S0366": "WannaCry",
+                    "S0364": "RawDisk",
+                    "S0347": "AuditCred",
+                    "S0245": "BADCALL",
+                    "S0246": "HARDRAIN",
+                    "S0241": "RATANKBA",
+                    "S0239": "Bankshot",
+                    "S0271": "KEYMARBLE",
+                    "S0238": "Proxysvc",
+                    "S0263": "TYPEFRAME",
+                    "S0180": "Volgmer",
+                    "S0181": "FALLCHILL",
+                    "S0108": "netsh",
+                    "S0002": "Mimikatz"
+                },
+                "techniques": {
+                    "T1588.004": "Digital Certificates",
+                    "T1587.001": "Malware",
+                    "T1583.006": "Web Services",
+                    "T1583.001": "Domains",
+                    "T1573.001": "Symmetric Cryptography",
+                    "T1071.001": "Web Protocols",
+                    "T1048.003": "Exfiltration Over Unencrypted/Obfuscated Non-C2 Protocol",
+                    "T1001.003": "Protocol Impersonation",
+                    "T1132.001": "Standard Encoding",
+                    "T1090.002": "External Proxy",
+                    "T1571": "Non-Standard Port",
+                    "T1074.001": "Local Data Staging",
+                    "T1204.002": "Malicious File",
+                    "T1059.005": "Visual Basic",
+                    "T1059.003": "Windows Command Shell",
+                    "T1059.001": "PowerShell",
+                    "T1566.003": "Spearphishing via Service",
+                    "T1566.001": "Spearphishing Attachment",
+                    "T1564.001": "Hidden Files and Directories",
+                    "T1562.004": "Disable or Modify System Firewall",
+                    "T1562.001": "Disable or Modify Tools",
+                    "T1561.002": "Disk Structure Wipe",
+                    "T1561.001": "Disk Content Wipe",
+                    "T1560.003": "Archive via Custom Method",
+                    "T1560.002": "Archive via Library",
+                    "T1560": "Archive Collected Data",
+                    "T1491.001": "Internal Defacement",
+                    "T1134.002": "Create Process with Token",
+                    "T1056.001": "Keylogging",
+                    "T1003.001": "LSASS Memory",
+                    "T1110.003": "Password Spraying",
+                    "T1021.002": "SMB/Windows Admin Shares",
+                    "T1021.001": "Remote Desktop Protocol",
+                    "T1036.005": "Match Legitimate Name or Location",
+                    "T1036.004": "Masquerade Task or Service",
+                    "T1027.002": "Software Packing",
+                    "T1070.006": "Timestomp",
+                    "T1070.004": "File Deletion",
+                    "T1547.009": "Shortcut Modification",
+                    "T1547.005": "Security Support Provider",
+                    "T1547.001": "Registry Run Keys / Startup Folder",
+                    "T1218.005": "Mshta",
+                    "T1218.001": "Compiled HTML File",
+                    "T1543.003": "Windows Service",
+                    "T1055.001": "Dynamic-link Library Injection",
+                    "T1542.003": "Bootkit",
+                    "T1529": "System Shutdown/Reboot",
+                    "T1496": "Resource Hijacking",
+                    "T1489": "Service Stop",
+                    "T1485": "Data Destruction",
+                    "T1189": "Drive-by Compromise",
+                    "T1203": "Exploitation for Client Execution",
+                    "T1124": "System Time Discovery",
+                    "T1112": "Modify Registry",
+                    "T1105": "Ingress Tool Transfer",
+                    "T1098": "Account Manipulation",
+                    "T1083": "File and Directory Discovery",
+                    "T1082": "System Information Discovery",
+                    "T1065": "Uncommonly Used Port",
+                    "T1057": "Process Discovery",
+                    "T1047": "Windows Management Instrumentation",
+                    "T1043": "Commonly Used Port",
+                    "T1041": "Exfiltration Over C2 Channel",
+                    "T1033": "System Owner/User Discovery",
+                    "T1027": "Obfuscated Files or Information",
+                    "T1026": "Multiband Communication",
+                    "T1016": "System Network Configuration Discovery",
+                    "T1012": "Query Registry",
+                    "T1010": "Application Window Discovery",
+                    "T1008": "Fallback Channels",
+                    "T1005": "Data from Local System",
+                    "T0865": "Spearphishing Attachment"
+                }
+            }
+        },
+        {
+            "id": "S0593",
+            "type": "tool",
+            "attributes": {
+                "name": "ECCENTRICBANDWAGON",
+                "aliases": [],
+                "labels": [
+                    "malware"
+                ],
+                "description": "ECCENTRICBANDWAGON is a Remote Access Tool (RAT) used by Lazarus Group that was first identified in August 2020. It is a reconnaissance tool--with keylogging and screen capture functionality--used for information gathering on compromised systems.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1074.001": "Local Data Staging",
+                    "T1059.003": "Windows Command Shell",
+                    "T1056.001": "Keylogging",
+                    "T1070.004": "File Deletion",
+                    "T1113": "Screen Capture",
+                    "T1027": "Obfuscated Files or Information"
+                }
+            },
+            "val": 6
+        },
+        {
+            "id": "S0586",
+            "type": "tool",
+            "attributes": {
+                "name": "TAINTEDSCRIBE",
+                "aliases": [],
+                "labels": [
+                    "malware"
+                ],
+                "description": "TAINTEDSCRIBE is a fully-featured beaconing implant integrated with command modules used by Lazarus Group. It was first reported in May 2020.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1573.001": "Symmetric Cryptography",
+                    "T1001.003": "Protocol Impersonation",
+                    "T1059.003": "Windows Command Shell",
+                    "T1560": "Archive Collected Data",
+                    "T1036.005": "Match Legitimate Name or Location",
+                    "T1027.001": "Binary Padding",
+                    "T1070.006": "Timestomp",
+                    "T1070.004": "File Deletion",
+                    "T1547.001": "Registry Run Keys / Startup Folder",
+                    "T1124": "System Time Discovery",
+                    "T1105": "Ingress Tool Transfer",
+                    "T1083": "File and Directory Discovery",
+                    "T1082": "System Information Discovery",
+                    "T1057": "Process Discovery",
+                    "T1018": "Remote System Discovery",
+                    "T1008": "Fallback Channels"
+                }
+            },
+            "val": 16
+        },
+        {
+            "id": "S0584",
+            "type": "tool",
+            "attributes": {
+                "name": "AppleJeus",
+                "aliases": [],
+                "labels": [
+                    "malware"
+                ],
+                "description": "AppleJeus is a family of downloaders initially discovered in 2018 embedded within trojanized cryptocurrency applications. AppleJeus has been used by Lazarus Group, targeting companies in the energy, finance, government, industry, technology, and telecommunications sectors, and several countries including the United States, United Kingdom, South Korea, Australia, Brazil, New Zealand, and Russia. AppleJeus has been used to distribute the FALLCHILL RAT.",
+                "platforms": [
+                    "Windows",
+                    "macOS"
+                ],
+                "techniques": {
+                    "T1071.001": "Web Protocols",
+                    "T1204.002": "Malicious File",
+                    "T1204.001": "Malicious Link",
+                    "T1569.001": "Launchctl",
+                    "T1059.004": "Unix Shell",
+                    "T1497.003": "Time Based Evasion",
+                    "T1566.002": "Spearphishing Link",
+                    "T1564.001": "Hidden Files and Directories",
+                    "T1553.002": "Code Signing",
+                    "T1070.004": "File Deletion",
+                    "T1548.002": "Bypass User Account Control",
+                    "T1218.007": "Msiexec",
+                    "T1543.004": "Launch Daemon",
+                    "T1543.003": "Windows Service",
+                    "T1053.005": "Scheduled Task",
+                    "T1140": "Deobfuscate/Decode Files or Information",
+                    "T1082": "System Information Discovery",
+                    "T1041": "Exfiltration Over C2 Channel",
+                    "T1027": "Obfuscated Files or Information"
+                }
+            },
+            "val": 19
+        },
+        {
+            "id": "S0567",
+            "type": "tool",
+            "attributes": {
+                "name": "Dtrack",
+                "aliases": [],
+                "labels": [
+                    "malware"
+                ],
+                "description": "Dtrack is spyware that was discovered in 2019 and has been used against Indian financial institutions, research facilities, and the Kudankulam Nuclear Power Plant. Dtrack shares similarities with the DarkSeoul campaign, which was attributed to Lazarus Group.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1074.001": "Local Data Staging",
+                    "T1574": "Hijack Execution Flow",
+                    "T1059.003": "Windows Command Shell",
+                    "T1560": "Archive Collected Data",
+                    "T1056.001": "Keylogging",
+                    "T1036.005": "Match Legitimate Name or Location",
+                    "T1070.004": "File Deletion",
+                    "T1547": "Boot or Logon Autostart Execution",
+                    "T1543.003": "Windows Service",
+                    "T1055.012": "Process Hollowing",
+                    "T1217": "Browser Bookmark Discovery",
+                    "T1140": "Deobfuscate/Decode Files or Information",
+                    "T1129": "Shared Modules",
+                    "T1105": "Ingress Tool Transfer",
+                    "T1083": "File and Directory Discovery",
+                    "T1082": "System Information Discovery",
+                    "T1078": "Valid Accounts",
+                    "T1057": "Process Discovery",
+                    "T1049": "System Network Connections Discovery",
+                    "T1027": "Obfuscated Files or Information",
+                    "T1016": "System Network Configuration Discovery",
+                    "T1012": "Query Registry",
+                    "T1005": "Data from Local System"
+                }
+            },
+            "val": 23
+        },
+        {
+            "id": "S0520",
+            "type": "tool",
+            "attributes": {
+                "name": "BLINDINGCAN",
+                "aliases": [],
+                "labels": [
+                    "malware"
+                ],
+                "description": "BLINDINGCAN is a remote access Trojan that has been used by the North Korean government since at least early 2020 in cyber operations against defense, engineering, and government organizations in Western Europe and the US.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1573.001": "Symmetric Cryptography",
+                    "T1071.001": "Web Protocols",
+                    "T1132.001": "Standard Encoding",
+                    "T1204.002": "Malicious File",
+                    "T1059.003": "Windows Command Shell",
+                    "T1566.001": "Spearphishing Attachment",
+                    "T1036.005": "Match Legitimate Name or Location",
+                    "T1553.002": "Code Signing",
+                    "T1027.002": "Software Packing",
+                    "T1070.006": "Timestomp",
+                    "T1070.004": "File Deletion",
+                    "T1218.011": "Rundll32",
+                    "T1140": "Deobfuscate/Decode Files or Information",
+                    "T1129": "Shared Modules",
+                    "T1105": "Ingress Tool Transfer",
+                    "T1083": "File and Directory Discovery",
+                    "T1082": "System Information Discovery",
+                    "T1041": "Exfiltration Over C2 Channel",
+                    "T1027": "Obfuscated Files or Information",
+                    "T1016": "System Network Configuration Discovery",
+                    "T1005": "Data from Local System"
+                }
+            },
+            "val": 21
+        },
+        {
+            "id": "S0498",
+            "type": "tool",
+            "attributes": {
+                "name": "Cryptoistic",
+                "aliases": [],
+                "labels": [
+                    "malware"
+                ],
+                "description": "Cryptoistic is a backdoor, written in Swift, that has been used by Lazarus Group.",
+                "platforms": [
+                    "macOS"
+                ],
+                "techniques": {
+                    "T1573": "Encrypted Channel",
+                    "T1070.004": "File Deletion",
+                    "T1105": "Ingress Tool Transfer",
+                    "T1095": "Non-Application Layer Protocol",
+                    "T1083": "File and Directory Discovery",
+                    "T1033": "System Owner/User Discovery",
+                    "T1005": "Data from Local System"
+                }
+            },
+            "val": 7
+        },
+        {
+            "id": "S0497",
+            "type": "tool",
+            "attributes": {
+                "name": "Dacls",
+                "aliases": [],
+                "labels": [
+                    "malware"
+                ],
+                "description": "Dacls is a multi-platform remote access tool used by Lazarus Group since at least December 2019.",
+                "platforms": [
+                    "macOS",
+                    "Linux",
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1071.001": "Web Protocols",
+                    "T1564.001": "Hidden Files and Directories",
+                    "T1543.004": "Launch Daemon",
+                    "T1543.001": "Launch Agent",
+                    "T1105": "Ingress Tool Transfer",
+                    "T1083": "File and Directory Discovery",
+                    "T1057": "Process Discovery",
+                    "T1036": "Masquerading",
+                    "T1027": "Obfuscated Files or Information"
+                }
+            },
+            "val": 9
+        },
+        {
+            "id": "S0431",
+            "type": "tool",
+            "attributes": {
+                "name": "HotCroissant",
+                "aliases": [],
+                "labels": [
+                    "malware"
+                ],
+                "description": "HotCroissant is a remote access trojan (RAT) attributed by U.S. government entities to malicious North Korean government cyber activity, tracked collectively as HIDDEN COBRA. HotCroissant shares numerous code similarities with Rifdoor.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1573.001": "Symmetric Cryptography",
+                    "T1564.003": "Hidden Window",
+                    "T1059.003": "Windows Command Shell",
+                    "T1027.002": "Software Packing",
+                    "T1070.004": "File Deletion",
+                    "T1053.005": "Scheduled Task",
+                    "T1518": "Software Discovery",
+                    "T1489": "Service Stop",
+                    "T1113": "Screen Capture",
+                    "T1106": "Native API",
+                    "T1105": "Ingress Tool Transfer",
+                    "T1083": "File and Directory Discovery",
+                    "T1082": "System Information Discovery",
+                    "T1057": "Process Discovery",
+                    "T1041": "Exfiltration Over C2 Channel",
+                    "T1033": "System Owner/User Discovery",
+                    "T1027": "Obfuscated Files or Information",
+                    "T1016": "System Network Configuration Discovery",
+                    "T1010": "Application Window Discovery",
+                    "T1007": "System Service Discovery"
+                }
+            },
+            "val": 20
+        },
+        {
+            "id": "S0376",
+            "type": "tool",
+            "attributes": {
+                "name": "HOPLIGHT",
+                "aliases": [],
+                "labels": [
+                    "malware"
+                ],
+                "description": "HOPLIGHT is a backdoor Trojan that has reportedly been used by the North Korean government.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1132.001": "Standard Encoding",
+                    "T1571": "Non-Standard Port",
+                    "T1569.002": "Service Execution",
+                    "T1059.003": "Windows Command Shell",
+                    "T1562.004": "Disable or Modify System Firewall",
+                    "T1003.002": "Security Account Manager",
+                    "T1550.002": "Pass the Hash",
+                    "T1124": "System Time Discovery",
+                    "T1112": "Modify Registry",
+                    "T1105": "Ingress Tool Transfer",
+                    "T1090": "Proxy",
+                    "T1083": "File and Directory Discovery",
+                    "T1082": "System Information Discovery",
+                    "T1065": "Uncommonly Used Port",
+                    "T1055": "Process Injection",
+                    "T1047": "Windows Management Instrumentation",
+                    "T1043": "Commonly Used Port",
+                    "T1041": "Exfiltration Over C2 Channel",
+                    "T1012": "Query Registry",
+                    "T1008": "Fallback Channels"
+                }
+            },
+            "val": 20
+        },
+        {
+            "id": "S0366",
+            "type": "tool",
+            "attributes": {
+                "name": "WannaCry",
+                "aliases": [
+                    "WanaCry",
+                    "WanaCrypt",
+                    "WanaCrypt0r",
+                    "WCry"
+                ],
+                "labels": [
+                    "malware"
+                ],
+                "description": "WannaCry is ransomware that was first seen in a global attack during May 2017, which affected more than 150 countries. It contains worm-like features to spread itself across a computer network using the SMBv1 exploit EternalBlue.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1573.002": "Asymmetric Cryptography",
+                    "T1090.003": "Multi-hop Proxy",
+                    "T1570": "Lateral Tool Transfer",
+                    "T1564.001": "Hidden Files and Directories",
+                    "T1563.002": "RDP Hijacking",
+                    "T1222.001": "Windows File and Directory Permissions Modification",
+                    "T1543.003": "Windows Service",
+                    "T1490": "Inhibit System Recovery",
+                    "T1489": "Service Stop",
+                    "T1486": "Data Encrypted for Impact",
+                    "T1210": "Exploitation of Remote Services",
+                    "T1120": "Peripheral Device Discovery",
+                    "T1083": "File and Directory Discovery",
+                    "T1047": "Windows Management Instrumentation",
+                    "T1018": "Remote System Discovery",
+                    "T1016": "System Network Configuration Discovery",
+                    "T0866": "Exploitation of Remote Services",
+                    "T0822": "External Remote Services",
+                    "T0867": "Lateral Tool Transfer"
+                }
+            },
+            "val": 19
+        },
+        {
+            "id": "S0364",
+            "type": "tool",
+            "attributes": {
+                "name": "RawDisk",
+                "aliases": [],
+                "labels": [
+                    "tool"
+                ],
+                "description": "RawDisk is a legitimate commercial driver from the EldoS Corporation that is used for interacting with files, disks, and partitions. The driver allows for direct modification of data on a local computer's hard drive. In some cases, the tool can enact these raw disk modifications from user-mode processes, circumventing Windows operating system security features.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1561.002": "Disk Structure Wipe",
+                    "T1561.001": "Disk Content Wipe",
+                    "T1485": "Data Destruction"
+                }
+            },
+            "val": 3
+        },
+        {
+            "id": "S0347",
+            "type": "tool",
+            "attributes": {
+                "name": "AuditCred",
+                "aliases": [
+                    "Roptimizer"
+                ],
+                "labels": [
+                    "malware"
+                ],
+                "description": "AuditCred is a malicious DLL that has been used by Lazarus Group during their 2018 attacks.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1059.003": "Windows Command Shell",
+                    "T1070.004": "File Deletion",
+                    "T1543.003": "Windows Service",
+                    "T1140": "Deobfuscate/Decode Files or Information",
+                    "T1105": "Ingress Tool Transfer",
+                    "T1090": "Proxy",
+                    "T1083": "File and Directory Discovery",
+                    "T1055": "Process Injection",
+                    "T1043": "Commonly Used Port",
+                    "T1027": "Obfuscated Files or Information"
+                }
+            },
+            "val": 10
+        },
+        {
+            "id": "S0245",
+            "type": "tool",
+            "attributes": {
+                "name": "BADCALL",
+                "aliases": [],
+                "labels": [
+                    "malware"
+                ],
+                "description": "BADCALL is a Trojan malware variant used by the group Lazarus Group.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1573.001": "Symmetric Cryptography",
+                    "T1001.003": "Protocol Impersonation",
+                    "T1571": "Non-Standard Port",
+                    "T1562.004": "Disable or Modify System Firewall",
+                    "T1112": "Modify Registry",
+                    "T1090": "Proxy",
+                    "T1082": "System Information Discovery",
+                    "T1043": "Commonly Used Port",
+                    "T1016": "System Network Configuration Discovery"
+                }
+            },
+            "val": 9
+        },
+        {
+            "id": "S0246",
+            "type": "tool",
+            "attributes": {
+                "name": "HARDRAIN",
+                "aliases": [],
+                "labels": [
+                    "malware"
+                ],
+                "description": "HARDRAIN is a Trojan malware variant reportedly used by the North Korean government.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1001.003": "Protocol Impersonation",
+                    "T1571": "Non-Standard Port",
+                    "T1059.003": "Windows Command Shell",
+                    "T1562.004": "Disable or Modify System Firewall",
+                    "T1090": "Proxy",
+                    "T1043": "Commonly Used Port"
+                }
+            },
+            "val": 6
+        },
+        {
+            "id": "S0241",
+            "type": "tool",
+            "attributes": {
+                "name": "RATANKBA",
+                "aliases": [],
+                "labels": [
+                    "malware"
+                ],
+                "description": "RATANKBA is a remote controller tool used by Lazarus Group. RATANKBA has been used in attacks targeting financial institutions in Poland, Mexico, Uruguay, the United Kingdom, and Chile. It was also seen used against organizations related to telecommunications, management consulting, information technology, insurance, aviation, and education. RATANKBA has a graphical user interface to allow the attacker to issue jobs to perform on the infected machines.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1071.001": "Web Protocols",
+                    "T1059.003": "Windows Command Shell",
+                    "T1059.001": "PowerShell",
+                    "T1087.001": "Local Account",
+                    "T1055.001": "Dynamic-link Library Injection",
+                    "T1105": "Ingress Tool Transfer",
+                    "T1082": "System Information Discovery",
+                    "T1057": "Process Discovery",
+                    "T1049": "System Network Connections Discovery",
+                    "T1047": "Windows Management Instrumentation",
+                    "T1043": "Commonly Used Port",
+                    "T1033": "System Owner/User Discovery",
+                    "T1018": "Remote System Discovery",
+                    "T1016": "System Network Configuration Discovery",
+                    "T1012": "Query Registry",
+                    "T1007": "System Service Discovery"
+                }
+            },
+            "val": 16
+        },
+        {
+            "id": "S0239",
+            "type": "tool",
+            "attributes": {
+                "name": "Bankshot",
+                "aliases": [
+                    "Trojan Manuscript"
+                ],
+                "labels": [
+                    "malware"
+                ],
+                "description": "Bankshot is a remote access tool (RAT) that was first reported by the Department of Homeland Security in December of 2017. In 2018, Lazarus Group used the Bankshot implant in attacks against the Turkish financial sector.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1071.001": "Web Protocols",
+                    "T1001.003": "Protocol Impersonation",
+                    "T1132.002": "Non-Standard Encoding",
+                    "T1571": "Non-Standard Port",
+                    "T1059.003": "Windows Command Shell",
+                    "T1087.002": "Domain Account",
+                    "T1087.001": "Local Account",
+                    "T1134.002": "Create Process with Token",
+                    "T1070.006": "Timestomp",
+                    "T1070.004": "File Deletion",
+                    "T1543.003": "Windows Service",
+                    "T1203": "Exploitation for Client Execution",
+                    "T1140": "Deobfuscate/Decode Files or Information",
+                    "T1119": "Automated Collection",
+                    "T1112": "Modify Registry",
+                    "T1106": "Native API",
+                    "T1105": "Ingress Tool Transfer",
+                    "T1083": "File and Directory Discovery",
+                    "T1082": "System Information Discovery",
+                    "T1070": "Indicator Removal on Host",
+                    "T1065": "Uncommonly Used Port",
+                    "T1057": "Process Discovery",
+                    "T1041": "Exfiltration Over C2 Channel",
+                    "T1012": "Query Registry",
+                    "T1005": "Data from Local System"
+                }
+            },
+            "val": 25
+        },
+        {
+            "id": "S0271",
+            "type": "tool",
+            "attributes": {
+                "name": "KEYMARBLE",
+                "aliases": [],
+                "labels": [
+                    "malware"
+                ],
+                "description": "KEYMARBLE is a Trojan that has reportedly been used by the North Korean government.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1573.001": "Symmetric Cryptography",
+                    "T1059.003": "Windows Command Shell",
+                    "T1070.004": "File Deletion",
+                    "T1113": "Screen Capture",
+                    "T1112": "Modify Registry",
+                    "T1105": "Ingress Tool Transfer",
+                    "T1083": "File and Directory Discovery",
+                    "T1082": "System Information Discovery",
+                    "T1057": "Process Discovery",
+                    "T1043": "Commonly Used Port",
+                    "T1016": "System Network Configuration Discovery"
+                }
+            },
+            "val": 11
+        },
+        {
+            "id": "S0238",
+            "type": "tool",
+            "attributes": {
+                "name": "Proxysvc",
+                "aliases": [],
+                "labels": [
+                    "malware"
+                ],
+                "description": "Proxysvc is a malicious DLL used by Lazarus Group in a campaign known as Operation GhostSecret. It has appeared to be operating undetected since 2017 and was mostly observed in higher education organizations. The goal of Proxysvc is to deliver additional payloads to the target and to maintain control for the attacker. It is in the form of a DLL that can also be executed as a standalone process.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1071.001": "Web Protocols",
+                    "T1569.002": "Service Execution",
+                    "T1059.003": "Windows Command Shell",
+                    "T1070.004": "File Deletion",
+                    "T1485": "Data Destruction",
+                    "T1124": "System Time Discovery",
+                    "T1119": "Automated Collection",
+                    "T1083": "File and Directory Discovery",
+                    "T1082": "System Information Discovery",
+                    "T1057": "Process Discovery",
+                    "T1043": "Commonly Used Port",
+                    "T1041": "Exfiltration Over C2 Channel",
+                    "T1016": "System Network Configuration Discovery",
+                    "T1012": "Query Registry",
+                    "T1005": "Data from Local System"
+                }
+            },
+            "val": 15
+        },
+        {
+            "id": "S0263",
+            "type": "tool",
+            "attributes": {
+                "name": "TYPEFRAME",
+                "aliases": [],
+                "labels": [
+                    "malware"
+                ],
+                "description": "TYPEFRAME is a remote access tool that has been used by Lazarus Group.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1571": "Non-Standard Port",
+                    "T1204.002": "Malicious File",
+                    "T1059.005": "Visual Basic",
+                    "T1059.003": "Windows Command Shell",
+                    "T1562.004": "Disable or Modify System Firewall",
+                    "T1070.004": "File Deletion",
+                    "T1543.003": "Windows Service",
+                    "T1140": "Deobfuscate/Decode Files or Information",
+                    "T1112": "Modify Registry",
+                    "T1105": "Ingress Tool Transfer",
+                    "T1094": "Custom Command and Control Protocol",
+                    "T1090": "Proxy",
+                    "T1083": "File and Directory Discovery",
+                    "T1082": "System Information Discovery",
+                    "T1065": "Uncommonly Used Port",
+                    "T1043": "Commonly Used Port",
+                    "T1027": "Obfuscated Files or Information"
+                }
+            },
+            "val": 17
+        },
+        {
+            "id": "S0180",
+            "type": "tool",
+            "attributes": {
+                "name": "Volgmer",
+                "aliases": [],
+                "labels": [
+                    "malware"
+                ],
+                "description": "Volgmer is a backdoor Trojan designed to provide covert access to a compromised system. It has been used since at least 2013 to target the government, financial, automotive, and media industries. Its primary delivery mechanism is suspected to be spearphishing.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1573.002": "Asymmetric Cryptography",
+                    "T1573.001": "Symmetric Cryptography",
+                    "T1059.003": "Windows Command Shell",
+                    "T1036.004": "Masquerade Task or Service",
+                    "T1070.004": "File Deletion",
+                    "T1543.003": "Windows Service",
+                    "T1140": "Deobfuscate/Decode Files or Information",
+                    "T1112": "Modify Registry",
+                    "T1106": "Native API",
+                    "T1105": "Ingress Tool Transfer",
+                    "T1094": "Custom Command and Control Protocol",
+                    "T1083": "File and Directory Discovery",
+                    "T1082": "System Information Discovery",
+                    "T1065": "Uncommonly Used Port",
+                    "T1057": "Process Discovery",
+                    "T1049": "System Network Connections Discovery",
+                    "T1043": "Commonly Used Port",
+                    "T1027": "Obfuscated Files or Information",
+                    "T1016": "System Network Configuration Discovery",
+                    "T1012": "Query Registry",
+                    "T1007": "System Service Discovery"
+                }
+            },
+            "val": 21
+        },
+        {
+            "id": "S0181",
+            "type": "tool",
+            "attributes": {
+                "name": "FALLCHILL",
+                "aliases": [],
+                "labels": [
+                    "malware"
+                ],
+                "description": "FALLCHILL is a RAT that has been used by Lazarus Group since at least 2016 to target the aerospace, telecommunications, and finance industries. It is usually dropped by other Lazarus Group malware or delivered when a victim unknowingly visits a compromised website.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1573.001": "Symmetric Cryptography",
+                    "T1001.003": "Protocol Impersonation",
+                    "T1070.006": "Timestomp",
+                    "T1070.004": "File Deletion",
+                    "T1543.003": "Windows Service",
+                    "T1083": "File and Directory Discovery",
+                    "T1082": "System Information Discovery",
+                    "T1016": "System Network Configuration Discovery"
+                }
+            },
+            "val": 8
+        },
+        {
+            "id": "S0108",
+            "type": "tool",
+            "attributes": {
+                "name": "netsh",
+                "aliases": [
+                    "netsh.exe"
+                ],
+                "labels": [
+                    "tool"
+                ],
+                "description": "netsh is a scripting utility used to interact with networking components on local or remote systems.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1518.001": "Security Software Discovery",
+                    "T1562.004": "Disable or Modify System Firewall",
+                    "T1546.007": "Netsh Helper DLL",
+                    "T1090": "Proxy"
+                }
+            },
+            "val": 4
+        },
+        {
+            "id": "G0020",
+            "type": "group",
+            "attributes": {
+                "val": 0,
+                "name": "Equation",
+                "aliases": [],
+                "description": "Equation is a sophisticated threat group that employs multiple remote access tools. The group is known to use zero-day exploits and has developed the capability to overwrite the firmware of hard disk drives.",
+                "affiliation": "",
+                "targets": [],
+                "speciality": [],
+                "tools": [],
+                "techniques": {
+                    "T1564.005": "Hidden File System",
+                    "T1480.001": "Environmental Keying",
+                    "T1542.002": "Component Firmware",
+                    "T1120": "Peripheral Device Discovery",
+                    "T1109": "Component Firmware"
+                }
+            }
+        },
+        {
+            "id": "G0016",
+            "type": "group",
+            "attributes": {
+                "val": 34,
+                "name": "APT29",
+                "aliases": [
+                    "Dark Halo",
+                    "StellarParticle",
+                    "NOBELIUM",
+                    "UNC2452",
+                    "YTTRIUM",
+                    "The Dukes",
+                    "Cozy Bear",
+                    "CozyDuke"
+                ],
+                "description": "APT29 is threat group that has been attributed to Russia's Foreign Intelligence Service (SVR). They have operated since at least 2008, often targeting government networks in Europe and NATO member countries, research institutes, and think tanks. APT29 reportedly compromised the Democratic National Committee starting in the summer of 2015.\n\nIn April 2021, the US and UK governments attributed the SolarWinds supply chain compromise cyber operation to the SVR; public statements included citations to APT29, Cozy Bear, and The Dukes. Victims of this campaign included government, consulting, technology, telecom, and other organizations in North America, Europe, Asia, and the Middle East. Industry reporting referred to the actors involved in this campaign as UNC2452, NOBELIUM, StellarParticle, and Dark Halo.",
+                "affiliation": "",
+                "targets": [],
+                "speciality": [],
+                "tools": {
+                    "S0597": "GoldFinder",
+                    "S0589": "Sibot",
+                    "S0588": "GoldMax",
+                    "S0565": "Raindrop",
+                    "S0562": "SUNSPOT",
+                    "S0560": "TEARDROP",
+                    "S0559": "SUNBURST",
+                    "S0552": "AdFind",
+                    "S0516": "SoreFang",
+                    "S0515": "WellMail",
+                    "S0514": "WellMess",
+                    "S0511": "RegDuke",
+                    "S0518": "PolyglotDuke",
+                    "S0195": "SDelete",
+                    "S0183": "Tor",
+                    "S0175": "meek",
+                    "S0154": "Cobalt Strike",
+                    "S0150": "POSHSPY",
+                    "S0139": "PowerDuke",
+                    "S0100": "ipconfig",
+                    "S0096": "Systeminfo",
+                    "S0057": "Tasklist",
+                    "S0054": "CloudDuke",
+                    "S0053": "SeaDuke",
+                    "S0052": "OnionDuke",
+                    "S0051": "MiniDuke",
+                    "S0050": "CosmicDuke",
+                    "S0049": "GeminiDuke",
+                    "S0048": "PinchDuke",
+                    "S0046": "CozyCar",
+                    "S0039": "Net",
+                    "S0037": "HAMMERTOSS",
+                    "S0029": "PsExec",
+                    "S0002": "Mimikatz"
+                },
+                "techniques": {
+                    "T1016.001": "Internet Connection Discovery",
+                    "T1484.002": "Domain Trust Modification",
+                    "T1606.002": "SAML Tokens",
+                    "T1606.001": "Web Cookies",
+                    "T1587.003": "Digital Certificates",
+                    "T1587.001": "Malware",
+                    "T1584.001": "Domains",
+                    "T1583.006": "Web Services",
+                    "T1583.001": "Domains",
+                    "T1071.001": "Web Protocols",
+                    "T1048.002": "Exfiltration Over Asymmetric Encrypted Non-C2 Protocol",
+                    "T1001.002": "Steganography",
+                    "T1090.004": "Domain Fronting",
+                    "T1090.003": "Multi-hop Proxy",
+                    "T1090.001": "Internal Proxy",
+                    "T1102.002": "Bidirectional Communication",
+                    "T1074.002": "Remote Data Staging",
+                    "T1078.002": "Domain Accounts",
+                    "T1204.002": "Malicious File",
+                    "T1204.001": "Malicious Link",
+                    "T1195.002": "Compromise Software Supply Chain",
+                    "T1568": "Dynamic Resolution",
+                    "T1059.006": "Python",
+                    "T1059.003": "Windows Command Shell",
+                    "T1059.001": "PowerShell",
+                    "T1566.002": "Spearphishing Link",
+                    "T1566.001": "Spearphishing Attachment",
+                    "T1562.004": "Disable or Modify System Firewall",
+                    "T1562.002": "Disable Windows Event Logging",
+                    "T1562.001": "Disable or Modify Tools",
+                    "T1560.001": "Archive via Utility",
+                    "T1114.002": "Remote Email Collection",
+                    "T1555": "Credentials from Password Stores",
+                    "T1003.006": "DCSync",
+                    "T1558.003": "Kerberoasting",
+                    "T1021.006": "Windows Remote Management",
+                    "T1036.005": "Match Legitimate Name or Location",
+                    "T1036.004": "Masquerade Task or Service",
+                    "T1553.002": "Code Signing",
+                    "T1027.002": "Software Packing",
+                    "T1552.004": "Private Keys",
+                    "T1070.006": "Timestomp",
+                    "T1070.004": "File Deletion",
+                    "T1550.004": "Web Session Cookie",
+                    "T1550.003": "Pass the Ticket",
+                    "T1550": "Use Alternate Authentication Material",
+                    "T1548.002": "Bypass User Account Control",
+                    "T1547.009": "Shortcut Modification",
+                    "T1546.008": "Accessibility Features",
+                    "T1546.003": "Windows Management Instrumentation Event Subscription",
+                    "T1547.001": "Registry Run Keys / Startup Folder",
+                    "T1218.011": "Rundll32",
+                    "T1098.002": "Exchange Email Delegate Permissions",
+                    "T1098.001": "Additional Cloud Credentials",
+                    "T1053.005": "Scheduled Task",
+                    "T1482": "Domain Trust Discovery",
+                    "T1190": "Exploit Public-Facing Application",
+                    "T1203": "Exploitation for Client Execution",
+                    "T1140": "Deobfuscate/Decode Files or Information",
+                    "T1133": "External Remote Services",
+                    "T1105": "Ingress Tool Transfer",
+                    "T1095": "Non-Application Layer Protocol",
+                    "T1087": "Account Discovery",
+                    "T1083": "File and Directory Discovery",
+                    "T1082": "System Information Discovery",
+                    "T1078": "Valid Accounts",
+                    "T1070": "Indicator Removal on Host",
+                    "T1069": "Permission Groups Discovery",
+                    "T1057": "Process Discovery",
+                    "T1047": "Windows Management Instrumentation",
+                    "T1043": "Commonly Used Port",
+                    "T1036": "Masquerading",
+                    "T1027": "Obfuscated Files or Information",
+                    "T1018": "Remote System Discovery",
+                    "T1005": "Data from Local System"
+                }
+            }
+        },
+        {
+            "id": "S0597",
+            "type": "tool",
+            "attributes": {
+                "name": "GoldFinder",
+                "aliases": [],
+                "labels": [
+                    "malware"
+                ],
+                "description": "GoldFinder is a custom HTTP tracer tool written in Go that logs the route a packet takes between a compromised network and a C2 server. It can be used to inform  threat actors of potential points of discovery or logging of their actions, including C2 related to other malware. GoldFinder was discovered in early 2021 during an investigation into the SolarWinds cyber intrusion by APT29.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1016.001": "Internet Connection Discovery",
+                    "T1071.001": "Web Protocols",
+                    "T1119": "Automated Collection"
+                }
+            },
+            "val": 3
+        },
+        {
+            "id": "S0589",
+            "type": "tool",
+            "attributes": {
+                "name": "Sibot",
+                "aliases": [],
+                "labels": [
+                    "malware"
+                ],
+                "description": "Sibot is dual-purpose malware written in VBScript designed to achieve persistence on a compromised system as well as download and execute additional payloads. Microsoft discovered three Sibot variants in early 2021 during its investigation of APT29 and the SolarWinds cyber intrusion campaign.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1071.001": "Web Protocols",
+                    "T1059.005": "Visual Basic",
+                    "T1036.005": "Match Legitimate Name or Location",
+                    "T1070.004": "File Deletion",
+                    "T1218.005": "Mshta",
+                    "T1218.011": "Rundll32",
+                    "T1053.005": "Scheduled Task",
+                    "T1140": "Deobfuscate/Decode Files or Information",
+                    "T1112": "Modify Registry",
+                    "T1105": "Ingress Tool Transfer",
+                    "T1102": "Web Service",
+                    "T1070": "Indicator Removal on Host",
+                    "T1049": "System Network Connections Discovery",
+                    "T1047": "Windows Management Instrumentation",
+                    "T1027": "Obfuscated Files or Information",
+                    "T1016": "System Network Configuration Discovery",
+                    "T1012": "Query Registry"
+                }
+            },
+            "val": 17
+        },
+        {
+            "id": "S0588",
+            "type": "tool",
+            "attributes": {
+                "name": "GoldMax",
+                "aliases": [
+                    "SUNSHUTTLE"
+                ],
+                "labels": [
+                    "malware"
+                ],
+                "description": "GoldMax is a second-stage C2 backdoor written in Go that was used by APT29 and discovered in early 2021 during the investigation into breaches related to the SolarWinds intrusion. GoldMax uses multiple defense evasion techniques, including avoiding virtualization execution and masking malicious traffic.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1573.002": "Asymmetric Cryptography",
+                    "T1071.001": "Web Protocols",
+                    "T1001.001": "Junk Data",
+                    "T1059.003": "Windows Command Shell",
+                    "T1497.003": "Time Based Evasion",
+                    "T1497.001": "System Checks",
+                    "T1036.005": "Match Legitimate Name or Location",
+                    "T1036.004": "Masquerade Task or Service",
+                    "T1027.002": "Software Packing",
+                    "T1053.005": "Scheduled Task",
+                    "T1140": "Deobfuscate/Decode Files or Information",
+                    "T1124": "System Time Discovery",
+                    "T1105": "Ingress Tool Transfer",
+                    "T1041": "Exfiltration Over C2 Channel",
+                    "T1027": "Obfuscated Files or Information",
+                    "T1016": "System Network Configuration Discovery"
+                }
+            },
+            "val": 16
+        },
+        {
+            "id": "S0565",
+            "type": "tool",
+            "attributes": {
+                "name": "Raindrop",
+                "aliases": [],
+                "labels": [
+                    "malware"
+                ],
+                "description": "Raindrop is a loader used by APT29 that was discovered on some victim machines during investigations related to the 2020 SolarWinds cyber intrusion. It was discovered in January 2021 and was likely used since at least May 2020.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1497.003": "Time Based Evasion",
+                    "T1036.005": "Match Legitimate Name or Location",
+                    "T1027.003": "Steganography",
+                    "T1027.002": "Software Packing",
+                    "T1140": "Deobfuscate/Decode Files or Information",
+                    "T1036": "Masquerading",
+                    "T1027": "Obfuscated Files or Information"
+                }
+            },
+            "val": 7
+        },
+        {
+            "id": "S0562",
+            "type": "tool",
+            "attributes": {
+                "name": "SUNSPOT",
+                "aliases": [],
+                "labels": [
+                    "malware"
+                ],
+                "description": "SUNSPOT is an implant that injected the SUNBURST backdoor into the SolarWinds Orion software update framework. It was used by APT29 since at least February 2020.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1195.002": "Compromise Software Supply Chain",
+                    "T1565.001": "Stored Data Manipulation",
+                    "T1036.005": "Match Legitimate Name or Location",
+                    "T1070.004": "File Deletion",
+                    "T1480": "Execution Guardrails",
+                    "T1134": "Access Token Manipulation",
+                    "T1140": "Deobfuscate/Decode Files or Information",
+                    "T1106": "Native API",
+                    "T1083": "File and Directory Discovery",
+                    "T1057": "Process Discovery",
+                    "T1027": "Obfuscated Files or Information"
+                }
+            },
+            "val": 11
+        },
+        {
+            "id": "S0560",
+            "type": "tool",
+            "attributes": {
+                "name": "TEARDROP",
+                "aliases": [],
+                "labels": [
+                    "malware"
+                ],
+                "description": "TEARDROP is a memory-only dropper that was discovered on some victim machines during investigations related to the 2020 SolarWinds cyber intrusion. It was likely used by APT29 since at least May 2020.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1036.005": "Match Legitimate Name or Location",
+                    "T1543.003": "Windows Service",
+                    "T1140": "Deobfuscate/Decode Files or Information",
+                    "T1112": "Modify Registry",
+                    "T1027": "Obfuscated Files or Information",
+                    "T1012": "Query Registry"
+                }
+            },
+            "val": 6
+        },
+        {
+            "id": "S0559",
+            "type": "tool",
+            "attributes": {
+                "name": "SUNBURST",
+                "aliases": [
+                    "Solorigate"
+                ],
+                "labels": [
+                    "malware"
+                ],
+                "description": "SUNBURST is a trojanized DLL designed to fit within the SolarWinds Orion software update framework. It was used by APT29 since at least February 2020.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1027.005": "Indicator Removal from Tools",
+                    "T1573.001": "Symmetric Cryptography",
+                    "T1071.004": "DNS",
+                    "T1071.001": "Web Protocols",
+                    "T1001.003": "Protocol Impersonation",
+                    "T1001.002": "Steganography",
+                    "T1001.001": "Junk Data",
+                    "T1132.001": "Standard Encoding",
+                    "T1568": "Dynamic Resolution",
+                    "T1059.005": "Visual Basic",
+                    "T1497.003": "Time Based Evasion",
+                    "T1497.001": "System Checks",
+                    "T1518.001": "Security Software Discovery",
+                    "T1562.001": "Disable or Modify Tools",
+                    "T1036.005": "Match Legitimate Name or Location",
+                    "T1553.002": "Code Signing",
+                    "T1070.004": "File Deletion",
+                    "T1546.012": "Image File Execution Options Injection",
+                    "T1218.011": "Rundll32",
+                    "T1112": "Modify Registry",
+                    "T1105": "Ingress Tool Transfer",
+                    "T1083": "File and Directory Discovery",
+                    "T1082": "System Information Discovery",
+                    "T1070": "Indicator Removal on Host",
+                    "T1057": "Process Discovery",
+                    "T1047": "Windows Management Instrumentation",
+                    "T1033": "System Owner/User Discovery",
+                    "T1027": "Obfuscated Files or Information",
+                    "T1016": "System Network Configuration Discovery",
+                    "T1012": "Query Registry",
+                    "T1007": "System Service Discovery",
+                    "T1005": "Data from Local System"
+                }
+            },
+            "val": 32
+        },
+        {
+            "id": "S0552",
+            "type": "tool",
+            "attributes": {
+                "name": "AdFind",
+                "aliases": [],
+                "labels": [
+                    "tool"
+                ],
+                "description": "AdFind is a free command-line query tool that can be used for gathering information from Active Directory.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1069.002": "Domain Groups",
+                    "T1087.002": "Domain Account",
+                    "T1482": "Domain Trust Discovery",
+                    "T1018": "Remote System Discovery",
+                    "T1016": "System Network Configuration Discovery"
+                }
+            },
+            "val": 5
+        },
+        {
+            "id": "S0516",
+            "type": "tool",
+            "attributes": {
+                "name": "SoreFang",
+                "aliases": [],
+                "labels": [
+                    "malware"
+                ],
+                "description": "SoreFang is first stage downloader used by APT29 for exfiltration and to load other malware.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1071.001": "Web Protocols",
+                    "T1069.002": "Domain Groups",
+                    "T1087.002": "Domain Account",
+                    "T1087.001": "Local Account",
+                    "T1053.005": "Scheduled Task",
+                    "T1190": "Exploit Public-Facing Application",
+                    "T1140": "Deobfuscate/Decode Files or Information",
+                    "T1105": "Ingress Tool Transfer",
+                    "T1083": "File and Directory Discovery",
+                    "T1082": "System Information Discovery",
+                    "T1057": "Process Discovery",
+                    "T1027": "Obfuscated Files or Information",
+                    "T1016": "System Network Configuration Discovery"
+                }
+            },
+            "val": 13
+        },
+        {
+            "id": "S0515",
+            "type": "tool",
+            "attributes": {
+                "name": "WellMail",
+                "aliases": [],
+                "labels": [
+                    "malware"
+                ],
+                "description": "WellMail is a lightweight malware written in Golang used by APT29, similar in design and structure to WellMess.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1573.002": "Asymmetric Cryptography",
+                    "T1571": "Non-Standard Port",
+                    "T1560": "Archive Collected Data",
+                    "T1140": "Deobfuscate/Decode Files or Information",
+                    "T1105": "Ingress Tool Transfer",
+                    "T1095": "Non-Application Layer Protocol",
+                    "T1033": "System Owner/User Discovery",
+                    "T1016": "System Network Configuration Discovery",
+                    "T1005": "Data from Local System"
+                }
+            },
+            "val": 9
+        },
+        {
+            "id": "S0514",
+            "type": "tool",
+            "attributes": {
+                "name": "WellMess",
+                "aliases": [],
+                "labels": [
+                    "malware"
+                ],
+                "description": "WellMess is lightweight malware family with variants written in .NET and Golang that has been in use since at least 2018 by APT29.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1573.002": "Asymmetric Cryptography",
+                    "T1573.001": "Symmetric Cryptography",
+                    "T1071.004": "DNS",
+                    "T1071.001": "Web Protocols",
+                    "T1001.001": "Junk Data",
+                    "T1132.001": "Standard Encoding",
+                    "T1059.003": "Windows Command Shell",
+                    "T1059.001": "PowerShell",
+                    "T1069.002": "Domain Groups",
+                    "T1140": "Deobfuscate/Decode Files or Information",
+                    "T1105": "Ingress Tool Transfer",
+                    "T1082": "System Information Discovery",
+                    "T1033": "System Owner/User Discovery",
+                    "T1016": "System Network Configuration Discovery",
+                    "T1005": "Data from Local System"
+                }
+            },
+            "val": 15
+        },
+        {
+            "id": "S0511",
+            "type": "tool",
+            "attributes": {
+                "name": "RegDuke",
+                "aliases": [],
+                "labels": [
+                    "malware"
+                ],
+                "description": "RegDuke is a first stage implant written in .NET and used by APT29 since at least 2017. RegDuke has been used to control a compromised machine when control of other implants on the machine was lost.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1102.002": "Bidirectional Communication",
+                    "T1059.001": "PowerShell",
+                    "T1027.003": "Steganography",
+                    "T1546.003": "Windows Management Instrumentation Event Subscription",
+                    "T1140": "Deobfuscate/Decode Files or Information",
+                    "T1112": "Modify Registry",
+                    "T1105": "Ingress Tool Transfer",
+                    "T1027": "Obfuscated Files or Information"
+                }
+            },
+            "val": 8
+        },
+        {
+            "id": "S0518",
+            "type": "tool",
+            "attributes": {
+                "name": "PolyglotDuke",
+                "aliases": [],
+                "labels": [
+                    "malware"
+                ],
+                "description": "PolyglotDuke is a downloader that has been used by APT29 since at least 2013. PolyglotDuke has been used to drop MiniDuke.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1071.001": "Web Protocols",
+                    "T1102.001": "Dead Drop Resolver",
+                    "T1027.003": "Steganography",
+                    "T1218.011": "Rundll32",
+                    "T1140": "Deobfuscate/Decode Files or Information",
+                    "T1112": "Modify Registry",
+                    "T1106": "Native API",
+                    "T1105": "Ingress Tool Transfer",
+                    "T1027": "Obfuscated Files or Information"
+                }
+            },
+            "val": 9
+        },
+        {
+            "id": "S0195",
+            "type": "tool",
+            "attributes": {
+                "name": "SDelete",
+                "aliases": [],
+                "labels": [
+                    "tool"
+                ],
+                "description": "SDelete is an application that securely deletes data in a way that makes it unrecoverable. It is part of the Microsoft Sysinternals suite of tools.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1070.004": "File Deletion",
+                    "T1485": "Data Destruction"
+                }
+            },
+            "val": 2
+        },
+        {
+            "id": "S0183",
+            "type": "tool",
+            "attributes": {
+                "name": "Tor",
+                "aliases": [],
+                "labels": [
+                    "tool"
+                ],
+                "description": "Tor is a software suite and network that provides increased anonymity on the Internet. It creates a multi-hop proxy network and utilizes multilayer encryption to protect both the message and routing information. Tor utilizes \"Onion Routing,\" in which messages are encrypted with multiple layers of encryption; at each step in the proxy network, the topmost layer is decrypted and the contents forwarded on to the next node until it reaches its destination.",
+                "platforms": [
+                    "Linux",
+                    "Windows",
+                    "macOS"
+                ],
+                "techniques": {
+                    "T1573.002": "Asymmetric Cryptography",
+                    "T1090.003": "Multi-hop Proxy"
+                }
+            },
+            "val": 2
+        },
+        {
+            "id": "S0175",
+            "type": "tool",
+            "attributes": {
+                "name": "meek",
+                "aliases": [],
+                "labels": [
+                    "tool"
+                ],
+                "description": "meek is an open-source Tor plugin that tunnels Tor traffic through HTTPS connections.",
+                "platforms": [
+                    "Linux",
+                    "Windows",
+                    "macOS"
+                ],
+                "techniques": {
+                    "T1090.004": "Domain Fronting"
+                }
+            },
+            "val": 1
+        },
+        {
+            "id": "S0154",
+            "type": "tool",
+            "attributes": {
+                "name": "Cobalt Strike",
+                "aliases": [],
+                "labels": [
+                    "malware"
+                ],
+                "description": "Cobalt Strike is a commercial, full-featured, remote access tool that bills itself as “adversary simulation software designed to execute targeted attacks and emulate the post-exploitation actions of advanced threat actors”. Cobalt Strike’s interactive post-exploit capabilities cover the full range of ATT&CK tactics, all executed within a single, integrated system.\n\nIn addition to its own capabilities, Cobalt Strike leverages the capabilities of other well-known tools such as Metasploit and Mimikatz.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1059.007": "JavaScript",
+                    "T1027.005": "Indicator Removal from Tools",
+                    "T1573.002": "Asymmetric Cryptography",
+                    "T1573.001": "Symmetric Cryptography",
+                    "T1071.004": "DNS",
+                    "T1071.001": "Web Protocols",
+                    "T1572": "Protocol Tunneling",
+                    "T1090.001": "Internal Proxy",
+                    "T1078.003": "Local Accounts",
+                    "T1078.002": "Domain Accounts",
+                    "T1569.002": "Service Execution",
+                    "T1059.006": "Python",
+                    "T1059.005": "Visual Basic",
+                    "T1059.003": "Windows Command Shell",
+                    "T1059.001": "PowerShell",
+                    "T1087.002": "Domain Account",
+                    "T1562.001": "Disable or Modify Tools",
+                    "T1134.004": "Parent PID Spoofing",
+                    "T1134.003": "Make and Impersonate Token",
+                    "T1134.001": "Token Impersonation/Theft",
+                    "T1056.001": "Keylogging",
+                    "T1003.002": "Security Account Manager",
+                    "T1021.006": "Windows Remote Management",
+                    "T1021.004": "SSH",
+                    "T1021.003": "Distributed Component Object Model",
+                    "T1021.002": "SMB/Windows Admin Shares",
+                    "T1021.001": "Remote Desktop Protocol",
+                    "T1553.002": "Code Signing",
+                    "T1070.006": "Timestomp",
+                    "T1550.002": "Pass the Hash",
+                    "T1548.002": "Bypass User Account Control",
+                    "T1543.003": "Windows Service",
+                    "T1055.012": "Process Hollowing",
+                    "T1055.001": "Dynamic-link Library Injection",
+                    "T1137.001": "Office Template Macros",
+                    "T1197": "BITS Jobs",
+                    "T1203": "Exploitation for Client Execution",
+                    "T1185": "Man in the Browser",
+                    "T1140": "Deobfuscate/Decode Files or Information",
+                    "T1135": "Network Share Discovery",
+                    "T1113": "Screen Capture",
+                    "T1112": "Modify Registry",
+                    "T1106": "Native API",
+                    "T1105": "Ingress Tool Transfer",
+                    "T1095": "Non-Application Layer Protocol",
+                    "T1071": "Application Layer Protocol",
+                    "T1068": "Exploitation for Privilege Escalation",
+                    "T1057": "Process Discovery",
+                    "T1055": "Process Injection",
+                    "T1049": "System Network Connections Discovery",
+                    "T1047": "Windows Management Instrumentation",
+                    "T1046": "Network Service Scanning",
+                    "T1043": "Commonly Used Port",
+                    "T1029": "Scheduled Transfer",
+                    "T1027": "Obfuscated Files or Information",
+                    "T1026": "Multiband Communication",
+                    "T1018": "Remote System Discovery",
+                    "T1016": "System Network Configuration Discovery",
+                    "T1012": "Query Registry",
+                    "T1005": "Data from Local System"
+                }
+            },
+            "val": 60
+        },
+        {
+            "id": "S0150",
+            "type": "tool",
+            "attributes": {
+                "name": "POSHSPY",
+                "aliases": [],
+                "labels": [
+                    "malware"
+                ],
+                "description": "POSHSPY is a backdoor that has been used by APT29 since at least 2015. It appears to be used as a secondary backdoor used if the actors lost access to their primary backdoors.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1573.002": "Asymmetric Cryptography",
+                    "T1568.002": "Domain Generation Algorithms",
+                    "T1059.001": "PowerShell",
+                    "T1070.006": "Timestomp",
+                    "T1546.003": "Windows Management Instrumentation Event Subscription",
+                    "T1105": "Ingress Tool Transfer",
+                    "T1030": "Data Transfer Size Limits",
+                    "T1027": "Obfuscated Files or Information"
+                }
+            },
+            "val": 8
+        },
+        {
+            "id": "S0139",
+            "type": "tool",
+            "attributes": {
+                "name": "PowerDuke",
+                "aliases": [],
+                "labels": [
+                    "malware"
+                ],
+                "description": "PowerDuke is a backdoor that was used by APT29 in 2016. It has primarily been delivered through Microsoft Word or Excel attachments containing malicious macros.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1564.004": "NTFS File Attributes",
+                    "T1059.003": "Windows Command Shell",
+                    "T1027.003": "Steganography",
+                    "T1070.004": "File Deletion",
+                    "T1547.001": "Registry Run Keys / Startup Folder",
+                    "T1218.011": "Rundll32",
+                    "T1485": "Data Destruction",
+                    "T1124": "System Time Discovery",
+                    "T1105": "Ingress Tool Transfer",
+                    "T1083": "File and Directory Discovery",
+                    "T1082": "System Information Discovery",
+                    "T1057": "Process Discovery",
+                    "T1043": "Commonly Used Port",
+                    "T1033": "System Owner/User Discovery",
+                    "T1016": "System Network Configuration Discovery",
+                    "T1010": "Application Window Discovery"
+                }
+            },
+            "val": 16
+        },
+        {
+            "id": "S0054",
+            "type": "tool",
+            "attributes": {
+                "name": "CloudDuke",
+                "aliases": [
+                    "MiniDionis",
+                    "CloudLook"
+                ],
+                "labels": [
+                    "malware"
+                ],
+                "description": "CloudDuke is malware that was used by APT29 in 2015.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1071.001": "Web Protocols",
+                    "T1102.002": "Bidirectional Communication",
+                    "T1105": "Ingress Tool Transfer"
+                }
+            },
+            "val": 3
+        },
+        {
+            "id": "S0053",
+            "type": "tool",
+            "attributes": {
+                "name": "SeaDuke",
+                "aliases": [
+                    "SeaDaddy",
+                    "SeaDesk"
+                ],
+                "labels": [
+                    "malware"
+                ],
+                "description": "SeaDuke is malware that was used by APT29 from 2014 to 2015. It was used primarily as a secondary backdoor for victims that were already compromised with CozyCar.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1573.001": "Symmetric Cryptography",
+                    "T1071.001": "Web Protocols",
+                    "T1132.001": "Standard Encoding",
+                    "T1059.003": "Windows Command Shell",
+                    "T1059.001": "PowerShell",
+                    "T1560.002": "Archive via Library",
+                    "T1114.002": "Remote Email Collection",
+                    "T1027.002": "Software Packing",
+                    "T1070.004": "File Deletion",
+                    "T1550.003": "Pass the Ticket",
+                    "T1547.009": "Shortcut Modification",
+                    "T1546.003": "Windows Management Instrumentation Event Subscription",
+                    "T1547.001": "Registry Run Keys / Startup Folder",
+                    "T1105": "Ingress Tool Transfer",
+                    "T1078": "Valid Accounts"
+                }
+            },
+            "val": 15
+        },
+        {
+            "id": "S0052",
+            "type": "tool",
+            "attributes": {
+                "name": "OnionDuke",
+                "aliases": [],
+                "labels": [
+                    "malware"
+                ],
+                "description": "OnionDuke is malware that was used by APT29 from 2013 to 2015.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1071.001": "Web Protocols",
+                    "T1102.003": "One-Way Communication",
+                    "T1499": "Endpoint Denial of Service",
+                    "T1140": "Deobfuscate/Decode Files or Information",
+                    "T1003": "OS Credential Dumping"
+                }
+            },
+            "val": 5
+        },
+        {
+            "id": "S0051",
+            "type": "tool",
+            "attributes": {
+                "name": "MiniDuke",
+                "aliases": [],
+                "labels": [
+                    "malware"
+                ],
+                "description": "MiniDuke is malware that was used by APT29 from 2010 to 2015. The MiniDuke toolset consists of multiple downloader and backdoor components. The loader has been used with other MiniDuke components as well as in conjunction with CosmicDuke and PinchDuke.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1071.001": "Web Protocols",
+                    "T1090.001": "Internal Proxy",
+                    "T1102.001": "Dead Drop Resolver",
+                    "T1568.002": "Domain Generation Algorithms",
+                    "T1543": "Create or Modify System Process",
+                    "T1105": "Ingress Tool Transfer",
+                    "T1083": "File and Directory Discovery",
+                    "T1082": "System Information Discovery",
+                    "T1027": "Obfuscated Files or Information",
+                    "T1008": "Fallback Channels"
+                }
+            },
+            "val": 10
+        },
+        {
+            "id": "S0050",
+            "type": "tool",
+            "attributes": {
+                "name": "CosmicDuke",
+                "aliases": [
+                    "TinyBaron",
+                    "BotgenStudios",
+                    "NemesisGemina"
+                ],
+                "labels": [
+                    "malware"
+                ],
+                "description": "CosmicDuke is malware that was used by APT29 from 2010 to 2015.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1573.001": "Symmetric Cryptography",
+                    "T1071.001": "Web Protocols",
+                    "T1048.003": "Exfiltration Over Unencrypted/Obfuscated Non-C2 Protocol",
+                    "T1003.004": "LSA Secrets",
+                    "T1114.001": "Local Email Collection",
+                    "T1555.003": "Credentials from Web Browsers",
+                    "T1056.001": "Keylogging",
+                    "T1555": "Credentials from Password Stores",
+                    "T1003.002": "Security Account Manager",
+                    "T1543.003": "Windows Service",
+                    "T1053.005": "Scheduled Task",
+                    "T1115": "Clipboard Data",
+                    "T1113": "Screen Capture",
+                    "T1083": "File and Directory Discovery",
+                    "T1068": "Exploitation for Privilege Escalation",
+                    "T1039": "Data from Network Shared Drive",
+                    "T1025": "Data from Removable Media",
+                    "T1020": "Automated Exfiltration",
+                    "T1005": "Data from Local System"
+                }
+            },
+            "val": 19
+        },
+        {
+            "id": "S0049",
+            "type": "tool",
+            "attributes": {
+                "name": "GeminiDuke",
+                "aliases": [],
+                "labels": [
+                    "malware"
+                ],
+                "description": "GeminiDuke is malware that was used by APT29 from 2009 to 2012.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1071.001": "Web Protocols",
+                    "T1087.001": "Local Account",
+                    "T1083": "File and Directory Discovery",
+                    "T1057": "Process Discovery",
+                    "T1016": "System Network Configuration Discovery",
+                    "T1007": "System Service Discovery"
+                }
+            },
+            "val": 6
+        },
+        {
+            "id": "S0048",
+            "type": "tool",
+            "attributes": {
+                "name": "PinchDuke",
+                "aliases": [],
+                "labels": [
+                    "malware"
+                ],
+                "description": "PinchDuke is malware that was used by APT29 from 2008 to 2010.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1071.001": "Web Protocols",
+                    "T1555.003": "Credentials from Web Browsers",
+                    "T1555": "Credentials from Password Stores",
+                    "T1083": "File and Directory Discovery",
+                    "T1082": "System Information Discovery",
+                    "T1005": "Data from Local System",
+                    "T1003": "OS Credential Dumping"
+                }
+            },
+            "val": 7
+        },
+        {
+            "id": "S0046",
+            "type": "tool",
+            "attributes": {
+                "name": "CozyCar",
+                "aliases": [
+                    "CozyDuke",
+                    "CozyBear",
+                    "Cozer",
+                    "EuroAPT"
+                ],
+                "labels": [
+                    "malware"
+                ],
+                "description": "CozyCar is malware that was used by APT29 from 2010 to 2015. It is a modular malware platform, and its backdoor component can be instructed to download and execute a variety of modules with different functionality.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1071.001": "Web Protocols",
+                    "T1102.002": "Bidirectional Communication",
+                    "T1059.003": "Windows Command Shell",
+                    "T1518.001": "Security Software Discovery",
+                    "T1003.002": "Security Account Manager",
+                    "T1003.001": "LSASS Memory",
+                    "T1036.003": "Rename System Utilities",
+                    "T1547.001": "Registry Run Keys / Startup Folder",
+                    "T1218.011": "Rundll32",
+                    "T1543.003": "Windows Service",
+                    "T1053.005": "Scheduled Task",
+                    "T1497": "Virtualization/Sandbox Evasion",
+                    "T1082": "System Information Discovery",
+                    "T1027": "Obfuscated Files or Information"
+                }
+            },
+            "val": 14
+        },
+        {
+            "id": "S0037",
+            "type": "tool",
+            "attributes": {
+                "name": "HAMMERTOSS",
+                "aliases": [
+                    "HammerDuke",
+                    "NetDuke"
+                ],
+                "labels": [
+                    "malware"
+                ],
+                "description": "HAMMERTOSS is a backdoor that was used by APT29 in 2015.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1573.001": "Symmetric Cryptography",
+                    "T1071.001": "Web Protocols",
+                    "T1001.002": "Steganography",
+                    "T1102.003": "One-Way Communication",
+                    "T1564.003": "Hidden Window",
+                    "T1567.002": "Exfiltration to Cloud Storage",
+                    "T1059.001": "PowerShell"
+                }
+            },
+            "val": 7
+        },
+        {
+            "id": "G0006",
+            "type": "group",
+            "attributes": {
+                "val": 17,
+                "name": "APT1",
+                "aliases": [
+                    "Comment Crew",
+                    "Comment Group",
+                    "Comment Panda"
+                ],
+                "description": "APT1 is a Chinese threat group that has been attributed to the 2nd Bureau of the People’s Liberation Army (PLA) General Staff Department’s (GSD) 3rd Department, commonly known by its Military Unit Cover Designator (MUCD) as Unit 61398.",
+                "affiliation": "",
+                "targets": [],
+                "speciality": [],
+                "tools": {
+                    "S0345": "Seasalt",
+                    "S0123": "xCmd",
+                    "S0122": "Pass-The-Hash Toolkit",
+                    "S0121": "Lslsass",
+                    "S0119": "Cachedump",
+                    "S0109": "WEBC2",
+                    "S0100": "ipconfig",
+                    "S0057": "Tasklist",
+                    "S0039": "Net",
+                    "S0029": "PsExec",
+                    "S0026": "GLOOXMAIL",
+                    "S0025": "CALENDAR",
+                    "S0017": "BISCUIT",
+                    "S0012": "PoisonIvy",
+                    "S0008": "gsecdump",
+                    "S0006": "pwdump",
+                    "S0002": "Mimikatz"
+                },
+                "techniques": {
+                    "T1588.001": "Malware",
+                    "T1585.002": "Email Accounts",
+                    "T1584.001": "Domains",
+                    "T1583.001": "Domains",
+                    "T1059.003": "Windows Command Shell",
+                    "T1566.002": "Spearphishing Link",
+                    "T1566.001": "Spearphishing Attachment",
+                    "T1087.001": "Local Account",
+                    "T1560.001": "Archive via Utility",
+                    "T1114.002": "Remote Email Collection",
+                    "T1114.001": "Local Email Collection",
+                    "T1003.001": "LSASS Memory",
+                    "T1021.001": "Remote Desktop Protocol",
+                    "T1036.005": "Match Legitimate Name or Location",
+                    "T1550.002": "Pass the Hash",
+                    "T1135": "Network Share Discovery",
+                    "T1119": "Automated Collection",
+                    "T1057": "Process Discovery",
+                    "T1049": "System Network Connections Discovery",
+                    "T1016": "System Network Configuration Discovery",
+                    "T1007": "System Service Discovery",
+                    "T1005": "Data from Local System",
+                    "T1346": "Obtain/re-use payloads",
+                    "T1330": "Acquire and/or use 3rd party software services",
+                    "T1312": "Compromise 3rd party infrastructure to support delivery",
+                    "T1333": "Dynamic DNS",
+                    "T1326": "Domain registration hijacking"
+                }
+            }
+        },
+        {
+            "id": "S0345",
+            "type": "tool",
+            "attributes": {
+                "name": "Seasalt",
+                "aliases": [],
+                "labels": [
+                    "malware"
+                ],
+                "description": "Seasalt is malware that has been linked to APT1's 2010 operations. It shares some code similarities with OceanSalt.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1071.001": "Web Protocols",
+                    "T1059.003": "Windows Command Shell",
+                    "T1036.004": "Masquerade Task or Service",
+                    "T1070.004": "File Deletion",
+                    "T1547.001": "Registry Run Keys / Startup Folder",
+                    "T1543.003": "Windows Service",
+                    "T1105": "Ingress Tool Transfer",
+                    "T1094": "Custom Command and Control Protocol",
+                    "T1083": "File and Directory Discovery",
+                    "T1057": "Process Discovery",
+                    "T1027": "Obfuscated Files or Information"
+                }
+            },
+            "val": 11
+        },
+        {
+            "id": "S0123",
+            "type": "tool",
+            "attributes": {
+                "name": "xCmd",
+                "aliases": [],
+                "labels": [
+                    "tool"
+                ],
+                "description": "xCmd is an open source tool that is similar to PsExec and allows the user to execute applications on remote systems.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1569.002": "Service Execution"
+                }
+            },
+            "val": 1
+        },
+        {
+            "id": "S0122",
+            "type": "tool",
+            "attributes": {
+                "name": "Pass-The-Hash Toolkit",
+                "aliases": [],
+                "labels": [
+                    "tool"
+                ],
+                "description": "Pass-The-Hash Toolkit is a toolkit that allows an adversary to \"pass\" a password hash (without knowing the original password) to log in to systems.",
+                "platforms": [
+                    "Linux",
+                    "Windows",
+                    "macOS"
+                ],
+                "techniques": {
+                    "T1550.002": "Pass the Hash"
+                }
+            },
+            "val": 1
+        },
+        {
+            "id": "S0121",
+            "type": "tool",
+            "attributes": {
+                "name": "Lslsass",
+                "aliases": [],
+                "labels": [
+                    "tool"
+                ],
+                "description": "Lslsass is a publicly-available tool that can dump active logon session password hashes from the lsass process.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1003.001": "LSASS Memory"
+                }
+            },
+            "val": 1
+        },
+        {
+            "id": "S0119",
+            "type": "tool",
+            "attributes": {
+                "name": "Cachedump",
+                "aliases": [],
+                "labels": [
+                    "tool"
+                ],
+                "description": "Cachedump is a publicly-available tool that program extracts cached password hashes from a system’s registry.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1003.005": "Cached Domain Credentials"
+                }
+            },
+            "val": 1
+        },
+        {
+            "id": "S0109",
+            "type": "tool",
+            "attributes": {
+                "name": "WEBC2",
+                "aliases": [],
+                "labels": [
+                    "malware"
+                ],
+                "description": "WEBC2 is a family of backdoor malware used by APT1 as early as July 2006. WEBC2 backdoors are designed to retrieve a webpage, with commands hidden in HTML comments or special tags, from a predetermined C2 server.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1574.001": "DLL Search Order Hijacking",
+                    "T1059.003": "Windows Command Shell",
+                    "T1105": "Ingress Tool Transfer"
+                }
+            },
+            "val": 3
+        },
+        {
+            "id": "S0026",
+            "type": "tool",
+            "attributes": {
+                "name": "GLOOXMAIL",
+                "aliases": [
+                    "Trojan.GTALK"
+                ],
+                "labels": [
+                    "malware"
+                ],
+                "description": "GLOOXMAIL is malware used by APT1 that mimics legitimate Jabber/XMPP traffic.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1102.002": "Bidirectional Communication"
+                }
+            },
+            "val": 1
+        },
+        {
+            "id": "S0025",
+            "type": "tool",
+            "attributes": {
+                "name": "CALENDAR",
+                "aliases": [],
+                "labels": [
+                    "malware"
+                ],
+                "description": "CALENDAR is malware used by APT1 that mimics legitimate Gmail Calendar traffic.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1102.002": "Bidirectional Communication",
+                    "T1059.003": "Windows Command Shell"
+                }
+            },
+            "val": 2
+        },
+        {
+            "id": "S0017",
+            "type": "tool",
+            "attributes": {
+                "name": "BISCUIT",
+                "aliases": [],
+                "labels": [
+                    "malware"
+                ],
+                "description": "BISCUIT is a backdoor that has been used by APT1 since as early as 2007.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1573.002": "Asymmetric Cryptography",
+                    "T1059.003": "Windows Command Shell",
+                    "T1056.001": "Keylogging",
+                    "T1113": "Screen Capture",
+                    "T1105": "Ingress Tool Transfer",
+                    "T1094": "Custom Command and Control Protocol",
+                    "T1082": "System Information Discovery",
+                    "T1057": "Process Discovery",
+                    "T1033": "System Owner/User Discovery",
+                    "T1008": "Fallback Channels"
+                }
+            },
+            "val": 10
+        },
+        {
+            "id": "S0012",
+            "type": "tool",
+            "attributes": {
+                "name": "PoisonIvy",
+                "aliases": [
+                    "Poison Ivy",
+                    "Darkmoon"
+                ],
+                "labels": [
+                    "malware"
+                ],
+                "description": "PoisonIvy is a popular remote access tool (RAT) that has been used by many groups.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1547.014": "Active Setup",
+                    "T1573.001": "Symmetric Cryptography",
+                    "T1074.001": "Local Data Staging",
+                    "T1059.003": "Windows Command Shell",
+                    "T1056.001": "Keylogging",
+                    "T1547.001": "Registry Run Keys / Startup Folder",
+                    "T1543.003": "Windows Service",
+                    "T1055.001": "Dynamic-link Library Injection",
+                    "T1112": "Modify Registry",
+                    "T1105": "Ingress Tool Transfer",
+                    "T1065": "Uncommonly Used Port",
+                    "T1027": "Obfuscated Files or Information",
+                    "T1014": "Rootkit",
+                    "T1010": "Application Window Discovery",
+                    "T1005": "Data from Local System"
+                }
+            },
+            "val": 15
+        },
+        {
+            "id": "S0008",
+            "type": "tool",
+            "attributes": {
+                "name": "gsecdump",
+                "aliases": [],
+                "labels": [
+                    "tool"
+                ],
+                "description": "gsecdump is a publicly-available credential dumper used to obtain password hashes and LSA secrets from Windows operating systems.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1003.004": "LSA Secrets",
+                    "T1003.002": "Security Account Manager"
+                }
+            },
+            "val": 2
+        },
+        {
+            "id": "S0006",
+            "type": "tool",
+            "attributes": {
+                "name": "pwdump",
+                "aliases": [],
+                "labels": [
+                    "tool"
+                ],
+                "description": "pwdump is a credential dumper.",
+                "platforms": [
+                    "Windows"
+                ],
+                "techniques": {
+                    "T1003.002": "Security Account Manager"
+                }
+            },
+            "val": 1
+        }
+    ],
+    "links": [
+        {
+            "source": "G0123",
+            "target": "S0572"
+        },
+        {
+            "source": "G0123",
+            "target": "S0569"
+        },
+        {
+            "source": "G0095",
+            "target": "S0409"
+        },
+        {
+            "source": "G0086",
+            "target": "S0029"
+        },
+        {
+            "source": "G0086",
+            "target": "S0002"
+        },
+        {
+            "source": "G0075",
+            "target": "S0254"
+        },
+        {
+            "source": "G0075",
+            "target": "S0255"
+        },
+        {
+            "source": "G0075",
+            "target": "S0160"
+        },
+        {
+            "source": "G0075",
+            "target": "S0075"
+        },
+        {
+            "source": "G0059",
+            "target": "S0192"
+        },
+        {
+            "source": "G0059",
+            "target": "S0186"
+        },
+        {
+            "source": "G0059",
+            "target": "S0029"
+        },
+        {
+            "source": "G0059",
+            "target": "S0002"
+        },
+        {
+            "source": "G0055",
+            "target": "S0176"
+        },
+        {
+            "source": "G0049",
+            "target": "S0495"
+        },
+        {
+            "source": "G0049",
+            "target": "S0360"
+        },
+        {
+            "source": "G0049",
+            "target": "S0349"
+        },
+        {
+            "source": "G0049",
+            "target": "S0264"
+        },
+        {
+            "source": "G0049",
+            "target": "S0269"
+        },
+        {
+            "source": "G0049",
+            "target": "S0258"
+        },
+        {
+            "source": "G0049",
+            "target": "S0185"
+        },
+        {
+            "source": "G0049",
+            "target": "S0189"
+        },
+        {
+            "source": "G0049",
+            "target": "S0184"
+        },
+        {
+            "source": "G0049",
+            "target": "S0170"
+        },
+        {
+            "source": "G0049",
+            "target": "S0160"
+        },
+        {
+            "source": "G0049",
+            "target": "S0104"
+        },
+        {
+            "source": "G0049",
+            "target": "S0100"
+        },
+        {
+            "source": "G0049",
+            "target": "S0096"
+        },
+        {
+            "source": "G0049",
+            "target": "S0095"
+        },
+        {
+            "source": "G0049",
+            "target": "S0075"
+        },
+        {
+            "source": "G0049",
+            "target": "S0057"
+        },
+        {
+            "source": "G0049",
+            "target": "S0039"
+        },
+        {
+            "source": "G0049",
+            "target": "S0029"
+        },
+        {
+            "source": "G0049",
+            "target": "S0002"
+        },
+        {
+            "source": "G0034",
+            "target": "S0598"
+        },
+        {
+            "source": "G0034",
+            "target": "S0401"
+        },
+        {
+            "source": "G0034",
+            "target": "S0368"
+        },
+        {
+            "source": "G0034",
+            "target": "S0365"
+        },
+        {
+            "source": "G0034",
+            "target": "S0343"
+        },
+        {
+            "source": "G0034",
+            "target": "S0231"
+        },
+        {
+            "source": "G0034",
+            "target": "S0089"
+        },
+        {
+            "source": "G0034",
+            "target": "S0555"
+        },
+        {
+            "source": "G0034",
+            "target": "S0368"
+        },
+        {
+            "source": "G0034",
+            "target": "S1004"
+        },
+        {
+            "source": "G0034",
+            "target": "S1005"
+        },
+        {
+            "source": "G0034",
+            "target": "S0089"
+        },
+        {
+            "source": "G0032",
+            "target": "S0593"
+        },
+        {
+            "source": "G0032",
+            "target": "S0586"
+        },
+        {
+            "source": "G0032",
+            "target": "S0584"
+        },
+        {
+            "source": "G0032",
+            "target": "S0567"
+        },
+        {
+            "source": "G0032",
+            "target": "S0520"
+        },
+        {
+            "source": "G0032",
+            "target": "S0498"
+        },
+        {
+            "source": "G0032",
+            "target": "S0497"
+        },
+        {
+            "source": "G0032",
+            "target": "S0431"
+        },
+        {
+            "source": "G0032",
+            "target": "S0376"
+        },
+        {
+            "source": "G0032",
+            "target": "S0366"
+        },
+        {
+            "source": "G0032",
+            "target": "S0364"
+        },
+        {
+            "source": "G0032",
+            "target": "S0347"
+        },
+        {
+            "source": "G0032",
+            "target": "S0245"
+        },
+        {
+            "source": "G0032",
+            "target": "S0246"
+        },
+        {
+            "source": "G0032",
+            "target": "S0241"
+        },
+        {
+            "source": "G0032",
+            "target": "S0239"
+        },
+        {
+            "source": "G0032",
+            "target": "S0271"
+        },
+        {
+            "source": "G0032",
+            "target": "S0238"
+        },
+        {
+            "source": "G0032",
+            "target": "S0263"
+        },
+        {
+            "source": "G0032",
+            "target": "S0180"
+        },
+        {
+            "source": "G0032",
+            "target": "S0181"
+        },
+        {
+            "source": "G0032",
+            "target": "S0108"
+        },
+        {
+            "source": "G0032",
+            "target": "S0002"
+        },
+        {
+            "source": "G0032",
+            "target": "S0366"
+        },
+        {
+            "source": "G0016",
+            "target": "S0597"
+        },
+        {
+            "source": "G0016",
+            "target": "S0589"
+        },
+        {
+            "source": "G0016",
+            "target": "S0588"
+        },
+        {
+            "source": "G0016",
+            "target": "S0565"
+        },
+        {
+            "source": "G0016",
+            "target": "S0562"
+        },
+        {
+            "source": "G0016",
+            "target": "S0560"
+        },
+        {
+            "source": "G0016",
+            "target": "S0559"
+        },
+        {
+            "source": "G0016",
+            "target": "S0552"
+        },
+        {
+            "source": "G0016",
+            "target": "S0516"
+        },
+        {
+            "source": "G0016",
+            "target": "S0515"
+        },
+        {
+            "source": "G0016",
+            "target": "S0514"
+        },
+        {
+            "source": "G0016",
+            "target": "S0511"
+        },
+        {
+            "source": "G0016",
+            "target": "S0518"
+        },
+        {
+            "source": "G0016",
+            "target": "S0195"
+        },
+        {
+            "source": "G0016",
+            "target": "S0183"
+        },
+        {
+            "source": "G0016",
+            "target": "S0175"
+        },
+        {
+            "source": "G0016",
+            "target": "S0154"
+        },
+        {
+            "source": "G0016",
+            "target": "S0150"
+        },
+        {
+            "source": "G0016",
+            "target": "S0139"
+        },
+        {
+            "source": "G0016",
+            "target": "S0100"
+        },
+        {
+            "source": "G0016",
+            "target": "S0096"
+        },
+        {
+            "source": "G0016",
+            "target": "S0057"
+        },
+        {
+            "source": "G0016",
+            "target": "S0054"
+        },
+        {
+            "source": "G0016",
+            "target": "S0053"
+        },
+        {
+            "source": "G0016",
+            "target": "S0052"
+        },
+        {
+            "source": "G0016",
+            "target": "S0051"
+        },
+        {
+            "source": "G0016",
+            "target": "S0050"
+        },
+        {
+            "source": "G0016",
+            "target": "S0049"
+        },
+        {
+            "source": "G0016",
+            "target": "S0048"
+        },
+        {
+            "source": "G0016",
+            "target": "S0046"
+        },
+        {
+            "source": "G0016",
+            "target": "S0039"
+        },
+        {
+            "source": "G0016",
+            "target": "S0037"
+        },
+        {
+            "source": "G0016",
+            "target": "S0029"
+        },
+        {
+            "source": "G0016",
+            "target": "S0002"
+        },
+        {
+            "source": "G0006",
+            "target": "S0345"
+        },
+        {
+            "source": "G0006",
+            "target": "S0123"
+        },
+        {
+            "source": "G0006",
+            "target": "S0122"
+        },
+        {
+            "source": "G0006",
+            "target": "S0121"
+        },
+        {
+            "source": "G0006",
+            "target": "S0119"
+        },
+        {
+            "source": "G0006",
+            "target": "S0109"
+        },
+        {
+            "source": "G0006",
+            "target": "S0100"
+        },
+        {
+            "source": "G0006",
+            "target": "S0057"
+        },
+        {
+            "source": "G0006",
+            "target": "S0039"
+        },
+        {
+            "source": "G0006",
+            "target": "S0029"
+        },
+        {
+            "source": "G0006",
+            "target": "S0026"
+        },
+        {
+            "source": "G0006",
+            "target": "S0025"
+        },
+        {
+            "source": "G0006",
+            "target": "S0017"
+        },
+        {
+            "source": "G0006",
+            "target": "S0012"
+        },
+        {
+            "source": "G0006",
+            "target": "S0008"
+        },
+        {
+            "source": "G0006",
+            "target": "S0006"
+        },
+        {
+            "source": "G0006",
+            "target": "S0002"
+        }
+    ]
+}

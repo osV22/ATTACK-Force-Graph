@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+@import "../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "../node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
+@import "../node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
+@import "../node_modules/@fortawesome/fontawesome-free/scss/regular.scss";
+
+@import "_colors.scss";
+@import "_buttons.scss";
+
+@import "_header.scss";
+@import "_sidebar.scss";
+@import "_legend.scss";
+
+* {
+    margin: 0;
+}
+
+* div {
+  color: white;
+}
+
+
+body {
+    margin: 0;
+    font-family: "Teko", sans-serif;
+}
+
+.parent {
+  position: relative;
+}
+
+.group-text {
+  color: $group-color;
+}
+
+.tool-text {
+  color: $tool-color;
+}
+
+.technique-text {
+  color: $technique-color;
+}
+
+.divider {
+  height: 2.5rem;
+  margin: 0 1rem;
+  border-right: $primary-blue solid 1px;
+}
+
+
+.about-box {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+.control-box {
+  position: absolute;
+  z-index: 7;
+  top: 5rem;
+  left: 1rem;
+}
+
+.bottom-bar {
+  opacity: .5;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  bottom: 0;
+  z-index: 7;
+  color: white;
+  margin-top: 1rem;
+
+  .made-by {
+    margin-left: .5rem;
+    font-size: .8rem;
+    font-family: Roboto, sans-serif;
+    i {
+      color: $group-color;
+    }
+
+    a {
+      color: $retro-green;
+      text-decoration: none;
+    }
+  }
+
+  .control-guide {
+    border-top: $primary-blue solid 1px;
+    margin: 0;
+    background-color: $header-background;
+
+    p {
+      text-align: center;
+      margin: 0;
+      letter-spacing: 1px;
+    }
+  }
+}
+
+.affiliation-avatar {
+  height: 80px;
+  width: 80px;
+}
+
+.white-space {
+  hr {
+    color: $retro-green;
+    margin: 4rem 0;
+  }
+}
+
+.control-section-title {
+  @extend .info-section-title;
+  margin-top: 1rem;
+  
+  hr {
+    margin-bottom: 0;
+  }
+}
+
+.warning-box {
+  margin-top: 1rem;
+  padding: .5rem;
+  color: $group-color;
+  border-left: 5px solid $group-color;
+  background-color: $group-disabled;
+
+  p {
+    font-size: 1.1rem;
+    margin: 0;
+  }
+}
+
+.guide-box {
+  @extend .warning-box;
+  color: $retro-green;
+  border-color: $retro-green;
+  background-color: $retro-green-disabled;
+
+  letter-spacing: 1px;
+}
+
