@@ -16791,7 +16791,7 @@ body {
 .about-box {
   display: flex;
   align-items: center;
-  justify-content: right;
+  justify-content: flex-end;
 }
 
 .control-box {
