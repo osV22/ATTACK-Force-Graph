@@ -15,6 +15,7 @@
 ## TODO:
 - [ ] Add affiliation template
 - [ ] Add speciality template
+- [ ] Add attacks/ targets template
 - [ ] Optimize time complexity for certain sections
 
 ## What?
@@ -41,11 +42,12 @@
 - Force-directed graphs are seriously... :sunglasses: *cool*  
 
 ## How?
-- The script uses @Cyb3rWard0g's ATTACK-Python-Client. Having used MITRE's STIX CTI... just use Roberto's package. 
-- Lift requests are network requests and can be time-consuming. Efficiency improvements planned after the main portion is done. 
+- The graph generator script uses [@Cyb3rWard0g's](https://github.com/Cyb3rWard0g) [ATTACK-Python-Client](https://github.com/OTRF/ATTACK-Python-Client) to build the ATTACK graph data. Having used MITRE's STIX... just use Roberto's package. 
+    - Lift requests are network requests and can be time-consuming. Efficiency improvements planned after the main portion is done. 
+- The 3D graph in the UI is the [3D version](https://github.com/vasturiano/3d-force-graph) of [vasturiano's](https://github.com/vasturiano) awesome JS force-directed graphs. 
 
 ## Example Demos
-- Full Demo with UI: PENDING
+- ## [Full ATTACK data demo with UI](https://osv22.github.io/ATTACK-Force-Graph/main-site/index.html)
 - Graphs Only:
     - [Example 0: Only Group Nodes](https://osv22.github.io/ATTACK-Force-Graph/show-example/example0/group30.html)
     - [Example 1: Group -> Tool(s)](https://osv22.github.io/ATTACK-Force-Graph/show-example/example1/group30-tools.html)
