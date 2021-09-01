@@ -16579,7 +16579,7 @@ readers do not read off random characters that represent icons */
   align-items: center;
 }
 
-.sidebar .node-type input, .sidebar .vertical-box input {
+.sidebar .node-type .header-input, .sidebar .vertical-box .header-input, .sidebar .node-type .vertical-box input, .sidebar .vertical-box .node-type input, .sidebar .vertical-box input {
   font-size: 1.5rem;
   color: white;
   width: 5rem;
@@ -16647,8 +16647,7 @@ readers do not read off random characters that represent icons */
 }
 
 .sidebar .vertical-box input {
-  width: auto;
-  left: -6.5rem;
+  width: 6.3rem;
 }
 
 .sidebar .vertical-noir-box {
