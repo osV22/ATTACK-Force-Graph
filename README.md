@@ -51,8 +51,8 @@
 - Graphs Only:
     - [Example 0: Only Group Nodes](https://osv22.github.io/ATTACK-Force-Graph/show-example/example0/group30.html)
     - [Example 1: Group -> Tool(s)](https://osv22.github.io/ATTACK-Force-Graph/show-example/example1/group30-tools.html)
-    - [Example 2: Group -> Group Tool(s) -> Tool Technqiue(s)](https://osv22.github.io/ATTACK-Force-Graph/show-example/example2/group10-tool-teq.html)
-    - [Example 3 - ALL Group -> Tools -> Technqiues (1MB of JSON Data)](https://osv22.github.io/ATTACK-Force-Graph/show-example/example3/all-group-tool-teqs.html)
+    - [Example 2: Group -> Group Tool(s) -> Tool Technique(s)](https://osv22.github.io/ATTACK-Force-Graph/show-example/example2/group10-tool-teq.html)
+    - [Example 3 - ALL Group -> Tools -> Techniques (1MB of JSON Data)](https://osv22.github.io/ATTACK-Force-Graph/show-example/example3/all-group-tool-teqs.html)
 
 ## Examples
 ![Example0 Header](/images/ex0_header.png)
@@ -84,7 +84,7 @@
         "Operation Golden Kitty",
     ],
     "description": "Cleaned description. Do not use `get_desc()` if you want raw desc...",
-    "affiliation": "You have assign this value yourself, read the NOTE above :)", 
+    "affiliation": "You have to assign this value yourself, read the NOTE above :)", 
     "targets": ["Also you have to", "set this. Read NOTE above"],
     "speciality": ["set this based on your assessment", "Read NOTE above"],
     "tools": {
