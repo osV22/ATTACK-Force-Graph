@@ -1,6 +1,7 @@
 import {
     updateSideBar
 } from "./sidebar.js";
+import { CSS2DRenderer, CSS2DObject } from 'https://esm.sh/three/examples/jsm/renderers/CSS2DRenderer.js';
 
 // ---------------------------------
 // GRAPH 
@@ -16,7 +17,7 @@ const defaultNodeColor = "yellow";
 const graphElement = document.getElementById("3d-graph");
 
 const Graph = ForceGraph3D({
-        extraRenderers: [new THREE.CSS2DRenderer()]
+        extraRenderers: [new CSS2DRenderer()]
     })
     (graphElement)
     .jsonUrl(defaultData)
@@ -88,13 +89,15 @@ Graph
             nodeEl.style.backgroundColor = "rgba(0, 0, 0, .30)";
             nodeEl.style.padding = "0 10px";
             nodeEl.className = "node-label";
-            return new THREE.CSS2DObject(nodeEl);
+            return new CSS2DObject(nodeEl);
         } else if (node.type === "tool") {
             const nodeEl = document.createElement('div');
             nodeEl.textContent = node.attributes.name;
             nodeEl.style.color = "cyan";
+            nodeEl.style.backgroundColor = "rgba(0, 0, 0, .30)";
+            nodeEl.style.padding = "0 10px";
             nodeEl.className = "node-label";
-            return new THREE.CSS2DObject(nodeEl);
+            return new CSS2DObject(nodeEl);
         }
         
     })
